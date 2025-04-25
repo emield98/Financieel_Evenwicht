@@ -1,23 +1,26 @@
-# Use official Node.js image
-FROM node:20
+# Use official Node.js LTS image with Alpine for smaller size
+FROM node:20-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy package files first (for caching)
+# Copy only the dependency files first for Docker caching
 COPY package.json yarn.lock ./
 
-# Install dependencies (this will install next)
-RUN yarn install
+# Install dependencies with exact versions
+RUN yarn install --frozen-lockfile
 
-# Now copy the rest of the app
+# Copy the rest of the app
 COPY . .
 
-# Build the app
+# Build the Next.js app
 RUN yarn build
 
-# Expose the port
+# Expose the default Next.js port
 EXPOSE 3000
+
+# Ensure the app listens to PORT from environment (Render injects it)
+ENV PORT 3000
 
 # Start the app
 CMD ["yarn", "start"]
