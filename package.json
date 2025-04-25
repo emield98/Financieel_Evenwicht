@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "preinstall": "echo 'Installing next manually...' && yarn add next",
     "build": "next build",
-    "start": "next start",
-    "postinstall": "yarn install"
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
