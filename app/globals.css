@@ -10,7 +10,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 358 76% 23%;
+    --primary: 358 85% 25%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -22,12 +22,12 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 358 76% 23%;
+    --ring: 358 85% 25%;
     --radius: 0.5rem;
 
     /* Original site colors */
     --dark: 240 1% 44%;
-    --dprime: 358 76% 23%;
+    --dprime: 358 85% 25%;
     --lprime: 203 42% 89%;
   }
 
@@ -67,13 +67,23 @@
   h4,
   h5,
   h6 {
-    @apply font-playfair;
+    @apply font-lora;
   }
 }
 
 .hero-pattern {
   opacity: 0.8;
-  background-image: repeating-linear-gradient( to right , #ffffff4f, #ffffff 50%, #f7f7f7 50%);
+  background-image: repeating-linear-gradient(to right, #ffffff4f, #ffffff 50%, #f7f7f7 50%);
   background-size: 10px 10px;
   background-color: #f7f7f7;
+}
+
+.page-header {
+  background: linear-gradient(
+    to right,
+    hsl(var(--primary)) 0%,
+    hsl(var(--primary) / 0.8) 70%,
+    hsl(var(--primary) / 0.6) 100%
+  );
+  color: white;
 }

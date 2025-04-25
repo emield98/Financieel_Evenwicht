@@ -8,22 +8,22 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-t from-white via-white to-primary/90 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-primary via-primary/90 to-primary/70 text-white overflow-hidden">
         <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Financieel & Fiscaal Evenwicht
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-md">
-                Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie,
+              <p className="text-lg md:text-xl max-w-md">
+                Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Ik help u met uw administratie,
                 belastingaangiften en financieel advies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link href="/diensten">Onze Diensten</Link>
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Link href="/diensten">Mijn Diensten</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                   <Link href="/contact">Contact Opnemen</Link>
                 </Button>
               </div>
@@ -39,9 +39,9 @@ export default function Home() {
       <section className="py-16 bg-muted/50 hero-pattern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Onze Diensten</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mijn Diensten</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven.
+              Ik bied een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven.
             </p>
           </div>
 
@@ -78,16 +78,16 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Over Financieel Evenwicht</h2>
               <p className="text-lg mb-4">
                 Financieel en Fiscaal Evenwicht is sinds 2008 hét administratiekantoor voor particulieren, zzp'ers en
-                mkb-bedrijven. Oprichter Margriet Doornbosch combineert meer dan 16 jaar ervaring bij ABN AMRO met
-                kennis uit haar werk bij een administratiekantoor en belastingadviesbureau.
+                mkb-bedrijven. Als oprichter combineer ik meer dan 16 jaar ervaring bij ABN AMRO met kennis uit mijn
+                werk bij een administratiekantoor en belastingadviesbureau.
               </p>
               <p className="text-lg mb-6">
-                Wij geloven in persoonlijk contact, wederzijds respect en vertrouwen. Of u nu een startende ondernemer
-                bent of behoefte heeft aan financiële zorgbeheer, wij nemen u zoveel mogelijk werk uit handen.
+                Ik geloof in persoonlijk contact, wederzijds respect en vertrouwen. Of u nu een startende ondernemer
+                bent of behoefte heeft aan financiële zorgbeheer, ik neem u zoveel mogelijk werk uit handen.
               </p>
               <Button asChild className="bg-primary hover:bg-primary/90">
                 <Link href="/over">
-                  Meer over ons <ArrowRight className="ml-2 h-4 w-4" />
+                  Meer over mij <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Klaar om uw financiën op orde te brengen?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Neem vandaag nog contact met ons op voor een vrijblijvend gesprek over hoe wij u kunnen helpen.
+            Neem vandaag nog contact met mij op voor een vrijblijvend gesprek over hoe ik u kan helpen.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link href="/contact">Contact Opnemen</Link>

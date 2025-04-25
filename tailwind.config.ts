@@ -61,7 +61,7 @@ const config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
-        playfair: ["var(--font-playfair)"],
+        lora: ["var(--font-lora)"],
       },
       keyframes: {
         "accordion-down": {

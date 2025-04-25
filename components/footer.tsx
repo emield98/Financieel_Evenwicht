@@ -13,7 +13,7 @@ export default function Footer() {
               <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={180} height={70} />
             </Link>
             <p className="text-muted-foreground text-sm">
-              Financieel en Fiscaal Evenwicht is sinds 2008 hét administratiekantoor voor particulieren, zzp'ers en
+              Financieel en Fiscaal Evenwicht is sinds 2008 mijn administratiekantoor voor particulieren, zzp'ers en
               mkb-bedrijven.
             </p>
           </div>
@@ -113,6 +113,14 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Financieel en Fiscaal Evenwicht. Alle rechten voorbehouden.
           </p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Privacybeleid
+            </Link>
+            <Link href="/voorwaarden" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Algemene voorwaarden
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

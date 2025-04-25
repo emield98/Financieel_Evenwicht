@@ -48,11 +48,11 @@ export default function Contact() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-muted py-12">
+      <section className="page-header py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Contact</h1>
-          <div className="flex items-center text-sm text-muted-foreground mt-4">
-            <Link href="/" className="hover:underline">
+          <div className="flex items-center text-sm text-white/80 mt-4">
+            <Link href="/" className="hover:underline text-white">
               Home
             </Link>
             <span className="mx-2">/</span>
@@ -69,8 +69,8 @@ export default function Contact() {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle>Neem contact met ons op</CardTitle>
-                  <CardDescription>Vul het formulier in en we nemen zo snel mogelijk contact met u op.</CardDescription>
+                  <CardTitle>Neem contact met mij op</CardTitle>
+                  <CardDescription>Vul het formulier in en ik neem zo snel mogelijk contact met u op.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -192,7 +192,7 @@ export default function Contact() {
                   <CardTitle>Direct contact</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>Heeft u een dringende vraag? Bel ons direct op:</p>
+                  <p>Heeft u een dringende vraag? Bel mij direct op:</p>
                   <p className="text-xl font-bold mt-2">
                     <a href="tel:+31651740538" className="hover:underline">
                       +316 517 405 38
