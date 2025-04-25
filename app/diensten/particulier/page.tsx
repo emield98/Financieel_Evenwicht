@@ -137,7 +137,7 @@ export default function ParticuliereDienstverlening() {
                   <Image src="/img/margriet.png" alt="Particuliere dienstverlening" fill className="object-cover" />
                 </div>
 
-                <div className="bg-primary text-white p-6 rounded-lg">
+                <div className="bg-primary/70 text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Persoonlijk advies</h3>
                   <p className="mb-6">
                     Wilt u weten wat ik voor u kan betekenen? Neem contact op voor een vrijblijvend gesprek.
