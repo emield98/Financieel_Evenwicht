@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary via-primary/75 to-secondary/100 text-white overflow-hidden">
-        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
+      <section className="relative bg-gradient-to-b from-primary via-primary/75 to-secondary/10 text-white overflow-hidden">
+        <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">

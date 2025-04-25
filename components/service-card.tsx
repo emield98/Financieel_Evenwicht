@@ -13,7 +13,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, imageSrc, href }: ServiceCardProps) {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
       <div className="relative h-48">
         <Image src={imageSrc || "/placeholder.svg"} alt={title} fill className="object-cover" />
       </div>
@@ -23,7 +23,7 @@ export default function ServiceCard({ title, description, imageSrc, href }: Serv
       <CardContent>
         <p className="text-muted-foreground">{description}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button asChild variant="outline" className="w-full group">
           <Link href={href}>
             Meer informatie
@@ -32,5 +32,5 @@ export default function ServiceCard({ title, description, imageSrc, href }: Serv
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
