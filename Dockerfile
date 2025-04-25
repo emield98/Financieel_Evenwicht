@@ -4,16 +4,19 @@ FROM node:20
 # Set working directory
 WORKDIR /app
 
-# Copy project files
-COPY . .
+# Copy package files first (for caching)
+COPY package.json yarn.lock ./
 
-# Install dependencies
+# Install dependencies (this will install next)
 RUN yarn install
 
-# Build Next.js app
+# Now copy the rest of the app
+COPY . .
+
+# Build the app
 RUN yarn build
 
-# Expose the port Next.js will run on
+# Expose the port
 EXPOSE 3000
 
 # Start the app
