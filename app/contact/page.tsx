@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/components/ui/use-toast"
+import { useToast, toast } from "@/hooks/use-toast"
 import { useState } from "react"
 import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from "lucide-react"
 import Link from "next/link"
@@ -43,10 +43,15 @@ export default function Contact() {
         toast({
           title: "Bericht verzonden",
           description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden.`,
+          variant: "success",
         })
         setFormData({ name: "", email: "", message: "" })
       } else {
-        toast({ title: "Fout", description: "Er ging iets mis bij het verzenden." })
+        toast({ 
+          title: "Fout", 
+          description: "Er ging iets mis bij het verzenden.", 
+          variant: "destructive", 
+        })
       }
     } catch (error) {
       toast({ title: "Fout", description: "Netwerkprobleem of serverfout." })

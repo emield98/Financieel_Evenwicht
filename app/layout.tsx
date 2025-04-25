@@ -5,6 +5,10 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { Toaster } from "@/components/ui/toaster"
+import { ToastProvider } from "@/components/ui/toast"
+
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" })
@@ -27,11 +31,17 @@ export default function RootLayout({
     <html lang="nl" suppressHydrationWarning>
       <body className={`${inter.variable} ${lora.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <ToastProvider> {/* 👈 HIER toevoegen */}
+
+            <div className="flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+
+            <Toaster /> {/* dit staat al goed */}
+
+          </ToastProvider> {/* 👈 sluiten */}
         </ThemeProvider>
       </body>
     </html>
