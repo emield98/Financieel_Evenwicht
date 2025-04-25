@@ -29,21 +29,32 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Bericht verzonden",
-        description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden. We nemen zo snel mogelijk contact met u op.`,
+  
+    try {
+      const response = await fetch("https://formspree.io/f/mldbdevb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       })
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      })
-      setIsSubmitting(false)
-    }, 1000)
+  
+      if (response.ok) {
+        toast({
+          title: "Bericht verzonden",
+          description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden.`,
+        })
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        toast({ title: "Fout", description: "Er ging iets mis bij het verzenden." })
+      }
+    } catch (error) {
+      toast({ title: "Fout", description: "Netwerkprobleem of serverfout." })
+    }
+  
+    setIsSubmitting(false)
   }
+  
 
   return (
     <>
