@@ -80,142 +80,146 @@ export default function Contact() {
       {/* Contact Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12">
-            {/* Contact Form */}
-            <div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Neem contact met mij op</CardTitle>
-                  <CardDescription>Vul het formulier in en ik neem zo snel mogelijk contact met u op.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Naam</Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">E-mail</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Bericht</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isSubmitting}>
-                      {isSubmitting ? "Verzenden..." : "Verzenden"}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2 space-y-6">
+              {/* Contact Form */}
+              <div>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Neem contact met mij op</CardTitle>
+                    <CardDescription>Vul het formulier in en ik neem zo snel mogelijk contact met u op.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Naam</Label>
+                        <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-mail</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Bericht</Label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isSubmitting}>
+                        {isSubmitting ? "Verzenden..." : "Verzenden"}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Contactgegevens</h2>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
-                    <div>
-                      <h3 className="font-bold">Adres</h3>
-                      <p>Financieel en Fiscaal Evenwicht</p>
-                      <p>Spoorstraat 35</p>
-                      <p>9636 AS Zuidbroek</p>
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-bold mb-6">Contactgegevens</h2>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <h3 className="font-bold">Adres</h3>
+                        <p>Financieel en Fiscaal Evenwicht</p>
+                        <p>Spoorstraat 35</p>
+                        <p>9636 AS Zuidbroek</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
-                    <div>
-                      <h3 className="font-bold">Postbus</h3>
-                      <p>Financieel en Fiscaal Evenwicht</p>
-                      <p>Postbus 7</p>
-                      <p>9620 AA  Slochteren</p>
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <h3 className="font-bold">Postbus</h3>
+                        <p>Financieel en Fiscaal Evenwicht</p>
+                        <p>Postbus 7</p>
+                        <p>9620 AA  Slochteren</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Phone className="h-5 w-5 text-primary mr-3 mt-1" />
-                    <div>
-                      <h3 className="font-bold">Telefoon</h3>
-                      <p>
-                        <a href="tel:+31651740538" className="hover:underline">
-                          +316 517 405 38
-                        </a>
-                      </p>
+                    <div className="flex items-start">
+                      <Phone className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <h3 className="font-bold">Telefoon</h3>
+                        <p>
+                          <a href="tel:+31651740538" className="hover:underline">
+                            +316 517 405 38
+                          </a>
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-primary mr-3 mt-1" />
-                    <div>
-                      <h3 className="font-bold">E-mail</h3>
-                      <p>
-                        <a href="mailto:financieel.evenwicht@home.nl" className="hover:underline">
-                          financieel.evenwicht@home.nl
-                        </a>
-                      </p>
+                    <div className="flex items-start">
+                      <Mail className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <h3 className="font-bold">E-mail</h3>
+                        <p>
+                          <a href="mailto:financieel.evenwicht@home.nl" className="hover:underline">
+                            financieel.evenwicht@home.nl
+                          </a>
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <Clock className="h-5 w-5 text-primary mr-3 mt-1" />
-                    <div>
-                      <h3 className="font-bold">Openingstijden</h3>
-                      <p>
-                        <strong>Maandag - Vrijdag:</strong> 09:00 - 18:00
-                      </p>
-                      <p>
-                        <strong>Zaterdag:</strong> 10:00 - 14:00
-                      </p>
-                      <p>
-                        <strong>Zondag:</strong> Gesloten
-                      </p>
+                    <div className="flex items-start">
+                      <Clock className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <h3 className="font-bold">Openingstijden</h3>
+                        <p>
+                          <strong>Maandag - Vrijdag:</strong> 09:00 - 18:00
+                        </p>
+                        <p>
+                          <strong>Zaterdag:</strong> 10:00 - 14:00
+                        </p>
+                        <p>
+                          <strong>Zondag:</strong> Gesloten
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Social Media</h2>
-                <div className="flex space-x-4">
-                  <a
-                    href="https://www.facebook.com/financieelevenwicht"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-muted rounded-full hover:bg-muted/80 transition-colors"
-                  >
-                    <Facebook className="h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-
-              <Card className="bg-primary text-white">
-                <CardHeader>
-                  <CardTitle>Direct contact</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Heeft u een dringende vraag? Bel mij direct op:</p>
-                  <p className="text-xl font-bold mt-2">
-                    <a href="tel:+31651740538" className="hover:underline">
-                      +316 517 405 38
+                <div>
+                  <h2 className="text-2xl font-bold mb-6">Social Media</h2>
+                  <div className="flex space-x-4">
+                    <a
+                      href="https://www.facebook.com/financieelevenwicht"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-muted rounded-full hover:bg-muted/80 transition-colors"
+                    >
+                      <Facebook className="h-5 w-5" />
                     </a>
-                  </p>
-                </CardContent>
-              </Card>
+                  </div>
+                </div>
+
+                <Card className="sm: bg-primary lg:bg-primary/70 text-white">
+                  <CardHeader>
+                    <CardTitle>Direct contact</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Heeft u een dringende vraag? Bel mij direct op:</p>
+                    <p className="text-xl font-bold mt-2">
+                      <a href="tel:+31651740538" className="hover:underline">
+                        +316 517 405 38
+                      </a>
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

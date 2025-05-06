@@ -165,7 +165,7 @@ export default function FinancieleZorgbeheer() {
                   <Image src="/img/finadmfis.png" alt="Financiële zorgbeheer" fill className="object-cover" />
                 </div>
 
-                <div className="bg-primary/70 text-white p-6 rounded-lg">
+                <div className="sm: bg-primary lg:bg-primary/70 text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Persoonlijk gesprek</h3>
                   <p className="mb-6">
                     Wilt u weten wat ik voor u of uw naaste kan betekenen? Neem contact op voor een vrijblijvend

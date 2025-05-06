@@ -80,7 +80,7 @@ export default function OverOns() {
                   <Image src="/img/finadmfis.png" alt="Financieel Evenwicht" fill className="object-cover" />
                 </div>
 
-                <div className="bg-primary/70 text-white p-6 rounded-lg">
+                <div className="sm: bg-primary lg:bg-primary/70 text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Neem Contact Op</h3>
                   <p className="mb-6">Heeft u vragen of wilt u een afspraak maken? Neem gerust contact met mij op.</p>
                   <Button asChild variant="secondary" className="w-full">

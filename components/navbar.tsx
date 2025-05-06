@@ -117,21 +117,30 @@ export default function Navbar() {
               <div className="pl-4 mt-1 space-y-1 border-l-2 border-muted">
                 <Link
                   href="/diensten/particulier"
-                  className="block py-1 px-2 rounded-md hover:bg-muted"
+                  className={cn(
+                    "block py-1 px-2 rounded-md",
+                    pathname === "/diensten/particulier" ? "bg-primary text-white" : "hover:bg-muted",
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Particuliere dienstverlening
                 </Link>
                 <Link
                   href="/diensten/zakelijk"
-                  className="block py-1 px-2 rounded-md hover:bg-muted"
+                  className={cn(
+                    "block py-1 px-2 rounded-md",
+                    pathname === "/diensten/zakelijk" ? "bg-primary text-white" : "hover:bg-muted",
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Zakelijke dienstverlening
                 </Link>
                 <Link
                   href="/diensten/zorgbeheer"
-                  className="block py-1 px-2 rounded-md hover:bg-muted"
+                  className={cn(
+                    "block py-1 px-2 rounded-md",
+                    pathname === "/diensten/zorgbeheer" ? "bg-primary text-white" : "hover:bg-muted",
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Financiële zorgbeheer
