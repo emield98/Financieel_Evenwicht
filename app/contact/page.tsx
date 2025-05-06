@@ -80,7 +80,7 @@ export default function Contact() {
       {/* Contact Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12">
             {/* Contact Form */}
             <div>
               <Card>
@@ -138,7 +138,15 @@ export default function Contact() {
                       <p>9636 AS Zuidbroek</p>
                     </div>
                   </div>
-
+                  <div className="flex items-start">
+                    <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-bold">Postbus</h3>
+                      <p>Financieel en Fiscaal Evenwicht</p>
+                      <p>Postbus 7</p>
+                      <p>9620 AA  Slochteren</p>
+                    </div>
+                  </div>
                   <div className="flex items-start">
                     <Phone className="h-5 w-5 text-primary mr-3 mt-1" />
                     <div>
@@ -156,8 +164,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold">E-mail</h3>
                       <p>
-                        <a href="mailto:info@financieelevenwicht.nl" className="hover:underline">
-                          info@financieelevenwicht.nl
+                        <a href="mailto:financieel.evenwicht@home.nl" className="hover:underline">
+                          financieel.evenwicht@home.nl
                         </a>
                       </p>
                     </div>
@@ -191,14 +199,6 @@ export default function Contact() {
                     className="p-3 bg-muted rounded-full hover:bg-muted/80 transition-colors"
                   >
                     <Facebook className="h-5 w-5" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/financieelevenwicht"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-muted rounded-full hover:bg-muted/80 transition-colors"
-                  >
-                    <Linkedin className="h-5 w-5" />
                   </a>
                 </div>
               </div>
