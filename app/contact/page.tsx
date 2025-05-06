@@ -1,35 +1,43 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { useToast, toast } from "@/hooks/use-toast"
-import { useState } from "react"
-import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast, toast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 export default function Contact() {
-  const { toast } = useToast()
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-  
+    e.preventDefault();
+    setIsSubmitting(true);
+
     try {
       const response = await fetch("https://formspree.io/f/mldbdevb", {
         method: "POST",
@@ -37,29 +45,28 @@ export default function Contact() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
-  
+      });
+
       if (response.ok) {
         toast({
           title: "Bericht verzonden",
           description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden.`,
           variant: "success",
-        })
-        setFormData({ name: "", email: "", message: "" })
+        });
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        toast({ 
-          title: "Fout", 
-          description: "Er ging iets mis bij het verzenden.", 
-          variant: "destructive", 
-        })
+        toast({
+          title: "Fout",
+          description: "Er ging iets mis bij het verzenden.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
-      toast({ title: "Fout", description: "Netwerkprobleem of serverfout." })
+      toast({ title: "Fout", description: "Netwerkprobleem of serverfout." });
     }
-  
-    setIsSubmitting(false)
-  }
-  
+
+    setIsSubmitting(false);
+  };
 
   return (
     <>
@@ -87,13 +94,22 @@ export default function Contact() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Neem contact met mij op</CardTitle>
-                    <CardDescription>Vul het formulier in en ik neem zo snel mogelijk contact met u op.</CardDescription>
+                    <CardDescription>
+                      Vul het formulier in en ik neem zo snel mogelijk contact
+                      met u op.
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Naam</Label>
-                        <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="email">E-mail</Label>
@@ -117,7 +133,11 @@ export default function Contact() {
                           required
                         />
                       </div>
-                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isSubmitting}>
+                      <Button
+                        type="submit"
+                        className="w-full bg-primary hover:bg-primary/90"
+                        disabled={isSubmitting}
+                      >
                         {isSubmitting ? "Verzenden..." : "Verzenden"}
                       </Button>
                     </form>
@@ -147,7 +167,7 @@ export default function Contact() {
                         <h3 className="font-bold">Postbus</h3>
                         <p>Financieel en Fiscaal Evenwicht</p>
                         <p>Postbus 7</p>
-                        <p>9620 AA  Slochteren</p>
+                        <p>9620 AA Slochteren</p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -155,7 +175,10 @@ export default function Contact() {
                       <div>
                         <h3 className="font-bold">Telefoon</h3>
                         <p>
-                          <a href="tel:+31651740538" className="hover:underline">
+                          <a
+                            href="tel:+31651740538"
+                            className="hover:underline"
+                          >
                             +316 517 405 38
                           </a>
                         </p>
@@ -167,7 +190,10 @@ export default function Contact() {
                       <div>
                         <h3 className="font-bold">E-mail</h3>
                         <p>
-                          <a href="mailto:financieel.evenwicht@home.nl" className="hover:underline">
+                          <a
+                            href="mailto:financieel.evenwicht@home.nl"
+                            className="hover:underline"
+                          >
                             financieel.evenwicht@home.nl
                           </a>
                         </p>
@@ -225,5 +251,5 @@ export default function Contact() {
         </div>
       </section>
     </>
-  )
+  );
 }
