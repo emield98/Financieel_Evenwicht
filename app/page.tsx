@@ -64,16 +64,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <ServiceCard
-              title="Financiële administratie"
+              title="Zakelijke dienstverlening"
               description="Wij nemen de verwerking van al uw in- en verkoopfacturen uit handen, evenals het inboeken van uw kas- en banktransacties. Ook debiteurenbeheer kunt u geheel of gedeeltelijk aan ons uitbesteden."
               imageSrc="/img/finadm.png"
               href="/diensten/particulier"
             />
 
             <ServiceCard
-              title="Startersbegeleiding"
+              title="Particuliere dienstverlening"
               description="Wij begeleiden startende ondernemers bij het opzetten en voeren van een financieel overzichtelijke onderneming."
               imageSrc="/img/startersbegeleiding.png"
               href="/diensten/zakelijk"
@@ -81,6 +81,13 @@ export default function Home() {
 
             <ServiceCard
               title="Bewindvoering"
+              description="Verkopen is een noodzaak, maar goed factureren en zorgen dat het geld binnenkomt is zeker zo belangrijk. U kunt het debiteurenbeheer gedeeltelijk of volledig uit handen geven aan ons."
+              imageSrc="/img/bewindvoering.png"
+              href="/diensten/zakelijk"
+            />
+
+            <ServiceCard
+              title="Begeleiding"
               description="Verkopen is een noodzaak, maar goed factureren en zorgen dat het geld binnenkomt is zeker zo belangrijk. U kunt het debiteurenbeheer gedeeltelijk of volledig uit handen geven aan ons."
               imageSrc="/img/bewindvoering.png"
               href="/diensten/zakelijk"

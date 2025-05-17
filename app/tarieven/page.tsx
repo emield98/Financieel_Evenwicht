@@ -41,33 +41,17 @@ export default function Tarieven() {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-[300px]">Dienst</TableHead>
-                    <TableHead>Tarief (incl. BTW)</TableHead>
+                    <TableHead>Tarief per uur (excl. BTW)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">Aangifte inkomstenbelasting (eenvoudig)</TableCell>
-                    <TableCell>€ 75,00</TableCell>
+                    <TableCell className="font-medium">Belastingaangite</TableCell>
+                    <TableCell>€ 60,00</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Aangifte inkomstenbelasting (uitgebreid)</TableCell>
                     <TableCell>€ 125,00</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Aangifte inkomstenbelasting (fiscaal partner)</TableCell>
-                    <TableCell>€ 150,00</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Aanvragen/wijzigen toeslagen</TableCell>
-                    <TableCell>€ 45,00</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Bezwaarschrift</TableCell>
-                    <TableCell>€ 95,00 per uur</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Financiële begeleiding bij echtscheiding</TableCell>
-                    <TableCell>€ 95,00 per uur</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
