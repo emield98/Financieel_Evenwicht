@@ -30,7 +30,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex">
-          <NavigationMenu>
+          <NavigationMenu delayDuration={999999}>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -53,10 +53,10 @@ export default function Navbar() {
                     <ListItem href="/diensten/particulier" title="Particuliere dienstverlening">
                       Belastingaangiften, toeslagen en financieel advies voor particulieren
                     </ListItem>
-                    <ListItem href="/diensten/zakelijk" title="Zakelijke dienstverlening">
+                    <ListItem href="/diensten/bewindvoering" title="Zakelijke dienstverlening">
                       Administratie, belastingaangiften en advies voor ondernemers
                     </ListItem>
-                    <ListItem href="/diensten/zorgbeheer" title="Financiële zorgbeheer">
+                    <ListItem href="/diensten/zakelijk" title="Financiële zorgbeheer">
                       Ouderenadministratie en beschermingsbewind
                     </ListItem>
                   </ul>

@@ -64,32 +64,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <ServiceCard
-              title="Zakelijke dienstverlening"
-              description="Wij nemen de verwerking van al uw in- en verkoopfacturen uit handen, evenals het inboeken van uw kas- en banktransacties. Ook debiteurenbeheer kunt u geheel of gedeeltelijk aan ons uitbesteden."
-              imageSrc="/img/finadm.png"
+              title="Particuliere dienstverlening"
+              description="Je kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft."
+              imageSrc="img/particulier_dienst.png"
               href="/diensten/particulier"
             />
 
             <ServiceCard
-              title="Particuliere dienstverlening"
-              description="Wij begeleiden startende ondernemers bij het opzetten en voeren van een financieel overzichtelijke onderneming."
-              imageSrc="/img/startersbegeleiding.png"
-              href="/diensten/zakelijk"
-            />
-
-            <ServiceCard
               title="Bewindvoering"
-              description="Verkopen is een noodzaak, maar goed factureren en zorgen dat het geld binnenkomt is zeker zo belangrijk. U kunt het debiteurenbeheer gedeeltelijk of volledig uit handen geven aan ons."
+              description="Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie."
               imageSrc="/img/bewindvoering.png"
-              href="/diensten/zakelijk"
+              href="/diensten/bewindvoering"
             />
 
             <ServiceCard
-              title="Begeleiding"
-              description="Verkopen is een noodzaak, maar goed factureren en zorgen dat het geld binnenkomt is zeker zo belangrijk. U kunt het debiteurenbeheer gedeeltelijk of volledig uit handen geven aan ons."
-              imageSrc="/img/bewindvoering.png"
+              title="Zakelijke dienstverlening "
+              description="Wij ondersteunen zzp’ers en mkb’ers met hun administratie, belastingaangiften en financiële planning. Ook voor startersbegeleiding, loonadministratie en advies op maat kunt u bij ons terecht."
+              imageSrc="/img/zakelijk.png"
               href="/diensten/zakelijk"
             />
           </div>

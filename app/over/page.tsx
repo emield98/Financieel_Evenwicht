@@ -17,7 +17,7 @@ export default function OverOns() {
               Home
             </Link>
             <span className="mx-2">/</span>
-            <span>Over mij</span>
+            <span>Over ons</span>
           </div>
         </div>
       </section>
@@ -27,71 +27,96 @@ export default function OverOns() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-6">
+              <blockquote className="mb-12 text-center max-w-3xl rounded-xl border-l-4 border-primary px-6 py-6 md:text-2xl font-semibold shadow-sm">
+                Betrokken, betrouwbaar en mensgericht — <br />dat is waar Financieel
+                en Fiscaal Evenwicht voor staat.
+              </blockquote>
               <h2 className="text-3xl font-bold mb-6">Mijn Achtergrond</h2>
 
               <p className="text-lg">
-                Financieel en Fiscaal Evenwicht is sinds 2008 mijn
-                administratiekantoor voor particulieren, zzp'ers en
-                mkb-bedrijven. Als oprichter combineer ik meer dan 16 jaar
-                ervaring bij ABN AMRO met kennis uit mijn werk bij een
-                administratiekantoor en belastingadviesbureau. Hierdoor kan ik u
-                breed en discreet adviseren op financieel gebied, en bied ik
-                waar nodig persoonlijke begeleiding.
+                Sinds 2008 biedt Financieel en Fiscaal Evenwicht ondersteuning
+                aan particulieren, zzp’ers en mkb’ers. Oprichter Margriet
+                Doornbosch combineert meer dan 16 jaar ervaring bij ABN AMRO met
+                kennis uit de praktijk. Deze brede achtergrond maakt het
+                mogelijk om klanten zowel financieel als persoonlijk te
+                begeleiden — met discretie, betrokkenheid en vakkennis.
               </p>
 
               <p className="text-lg">
-                Ik geloof in persoonlijk contact, wederzijds respect en
-                vertrouwen. Of u nu een startende ondernemer bent of behoefte
-                heeft aan financiële zorgbeheer, ik neem u zoveel mogelijk werk
-                uit handen, zodat u zich kunt concentreren op wat u het beste
-                doet: ondernemen.
+                Van belastingaangifte tot beschermingsbewind: wij geloven in
+                maatwerk, duidelijke communicatie en een menselijke benadering.
+                U staat centraal, niet de cijfers. Dat betekent dat we altijd
+                goed luisteren, samen doelen opstellen en begeleiding bieden die
+                aansluit bij uw situatie en wensen.
               </p>
 
               <p className="text-lg">
-                Mijn specialiteit ligt ook in financiële zorgbeheer, waaronder
-                ouderenadministratie en beschermingsbewind. Ik heb ruime
-                ervaring in de financiële begeleiding van cliënten, waaronder
-                mensen die getroffen zijn door niet-aangeboren hersenletsel
-                zoals MS, hersenbloeding, Parkinson of Alzheimer.
+                We hebben ruime ervaring in het ondersteunen van mensen met
+                niet-aangeboren hersenletsel (zoals MS, Parkinson of een
+                hersenbloeding), ouderen die moeite hebben met administratie, en
+                cliënten die tijdelijk of langdurig behoefte hebben aan
+                bescherming van hun financiën. Waar nodig schakelen we ook het
+                sociale netwerk in en stimuleren we het behoud van eigen regie.
               </p>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6">Mijn Waarden</h2>
-
+              <hr className="border: none; height: 0.5px; margin: 1rem 0;" />
+              <h2 className="text-3xl font-bold mt-12 mb-6">
+                Onze kernwaarden
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-muted p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-3">
-                    Persoonlijke Aanpak
+                    Persoonlijk contact
                   </h3>
                   <p>
-                    Ik geloof in een persoonlijke benadering waarbij ik echt
-                    luister naar uw behoeften en situatie.
+                    We nemen de tijd voor u en bouwen aan een vertrouwensband.
                   </p>
                 </div>
 
                 <div className="bg-muted p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-3">Betrouwbaarheid</h3>
-                  <p>
-                    Discretie en betrouwbaarheid staan centraal in mijn
-                    dienstverlening. Uw gegevens zijn bij mij in veilige handen.
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">Wederzijds respect</h3>
+                  <p>Iedereen verdient begeleiding zonder oordeel.</p>
                 </div>
 
                 <div className="bg-muted p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-3">Expertise</h3>
-                  <p>
-                    Met jarenlange ervaring in de financiële sector bied ik
-                    deskundig advies op maat.
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">
+                    Verantwoordelijkheid en integriteit
+                  </h3>
+                  <p>We gaan zorgvuldig om met wat u ons toevertrouwt.</p>
                 </div>
 
                 <div className="bg-muted p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-3">Transparantie</h3>
+                  <h3 className="text-xl font-bold mb-3">
+                    Humor waar het kan, helderheid waar het moet
+                  </h3>
+                  <p>We maken zaken begrijpelijk en toegankelijk.</p>
+                </div>
+
+                <div className="bg-muted p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3">
+                    Stimuleren van zelfstandigheid
+                  </h3>
                   <p>
-                    Ik werk met duidelijke afspraken en heldere communicatie,
-                    zonder verborgen kosten.
+                    Waar mogelijk helpen we u om zelf de regie (terug) te nemen.
                   </p>
                 </div>
               </div>
+              <hr className="border: none; height: 0.5px; margin: 1rem 0;" />
+              <h2 className="text-3xl font-bold mb-6">Heldere gedragsregels</h2>
+              <p className="text-lg">
+                Om een veilige, prettige en professionele samenwerking te waarborgen, hanteren wij een gedragscode. Deze omvat onder andere:
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Respectvolle omgang met elkaar, ongeacht achtergrond of overtuiging</li>
+                  <li>Geen ruimte voor discriminatie, intimidatie of grensoverschrijdend gedrag</li>
+                  <li>Geen gebruik van alcohol of drugs tijdens begeleiding</li>
+                  <li>Rookvrij beleid, tenzij uitdrukkelijk anders afgesproken</li>
+                </ul>
+              </p>
+              <p className="text-lg">
+                Deze richtlijnen gelden zowel voor ons als voor onze cliënten. Zo creëren we een veilige en respectvolle werkomgeving voor iedereen.
+              </p>
             </div>
 
             <div className="lg:col-span-1">

@@ -23,6 +23,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    telefoonnummer: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,7 +54,7 @@ export default function Contact() {
           description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden.`,
           variant: "success",
         });
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", telefoonnummer: "", message: "" });
       } else {
         toast({
           title: "Fout",
@@ -93,10 +94,10 @@ export default function Contact() {
               <div>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Neem contact met mij op</CardTitle>
+                    <CardTitle>Neem contact met ons op</CardTitle>
                     <CardDescription>
-                      Vul het formulier in en ik neem zo snel mogelijk contact
-                      met u op.
+                      Vul het formulier in en wij nemen zo snel mogelijk contact
+                      met u op
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -121,6 +122,33 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                         />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="telefoonnummer">Telefoonnummer</Label>
+                        <Input
+                          id="telefoonnummer"
+                          name="telefoonnummer"
+                          type="text"
+                          inputMode="tel"
+                          pattern="[0-9+\s\-]*"
+                          value={formData.telefoonnummer}
+                          onChange={handleChange}
+                          aria-invalid={
+                            formData.telefoonnummer !== "" &&
+                            !/^[0-9+\s\-]*$/.test(formData.telefoonnummer)
+                          }
+                          aria-describedby="telefoonnummer-error"
+                        />
+                        {formData.telefoonnummer !== "" &&
+                          !/^[0-9+\s\-]*$/.test(formData.telefoonnummer) && (
+                            <p
+                              id="telefoonnummer-error"
+                              className="text-sm text-red-600 mt-1"
+                            >
+                              Voer een geldig telefoonnummer in (alleen cijfers,
+                              spaties, + of -).
+                            </p>
+                          )}
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="message">Bericht</Label>
@@ -205,10 +233,22 @@ export default function Contact() {
                       <div>
                         <h3 className="font-bold">Openingstijden</h3>
                         <p>
-                          <strong>Maandag - Vrijdag:</strong> 09:00 - 18:00
+                          <strong>Maandag:</strong> Gesloten
                         </p>
                         <p>
-                          <strong>Zaterdag:</strong> 10:00 - 14:00
+                          <strong>Dinsdag:</strong> 09:00 - 17:00
+                        </p>
+                        <p>
+                          <strong>Woensdag:</strong> 09:00 - 17:00
+                        </p>
+                        <p>
+                          <strong>Donderdag:</strong> 09:00 - 17:00
+                        </p>
+                        <p>
+                          <strong>Vrijdag:</strong> 09:00 - 17:00
+                        </p>
+                        <p>
+                          <strong>Zaterdag:</strong> Gesloten
                         </p>
                         <p>
                           <strong>Zondag:</strong> Gesloten
@@ -218,26 +258,12 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">Social Media</h2>
-                  <div className="flex space-x-4">
-                    <a
-                      href="https://www.facebook.com/financieelevenwicht"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-muted rounded-full hover:bg-muted/80 transition-colors"
-                    >
-                      <Facebook className="h-5 w-5" />
-                    </a>
-                  </div>
-                </div>
-
                 <Card className="sm: bg-primary lg:bg-primary/70 text-white">
                   <CardHeader>
                     <CardTitle>Direct contact</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Heeft u een dringende vraag? Bel mij direct op:</p>
+                    <p>Liever meteen telefonisch contact? Bel ons op:</p>
                     <p className="text-xl font-bold mt-2">
                       <a href="tel:+31651740538" className="hover:underline">
                         +316 517 405 38
