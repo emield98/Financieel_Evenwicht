@@ -53,11 +53,11 @@ export default function Navbar() {
                     <ListItem href="/diensten/particulier" title="Particuliere dienstverlening">
                       Belastingaangiften, toeslagen en financieel advies voor particulieren
                     </ListItem>
-                    <ListItem href="/diensten/bewindvoering" title="Zakelijke dienstverlening">
+                    <ListItem href="/diensten/zakelijk" title="Zakelijke dienstverlening">
                       Administratie, belastingaangiften en advies voor ondernemers
                     </ListItem>
-                    <ListItem href="/diensten/zakelijk" title="Financiële zorgbeheer">
-                      Ouderenadministratie en beschermingsbewind
+                    <ListItem href="/diensten/bewindvoering" title="Bewindvoering">
+                      Beschermingsbewind en budgetcoaching
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

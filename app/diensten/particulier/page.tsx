@@ -57,15 +57,18 @@ export default function ParticuliereDienstverlening() {
                     <p className="mb-4">
                       Wij bieden hulp bij uiteenlopende financiële vraagstukken.
                       U kunt onder andere bij ons terecht voor:
-                      <Item>Belastingaangifte</Item>
-                      <Item>Overlijdensaangifte</Item>
-                      <Item>Successieaangifte</Item>
-                      <Item>Ondersteuning bij schenkingen</Item>
-                      <Item>Financiële begeleiding bij echtscheiding</Item>
-                      <Item>Berekenen en aanvragen van toeslagen</Item>
-                      <Item>Opmaken van bezwaarschriften</Item>
-                      <Item>Aanvragen van uitkeringen</Item>
                     </p>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Belastingaangifte</li>
+                        <li>Overlijdensaangifte</li>
+                        <li>Successieaangifte</li>
+                        <li>Ondersteuning bij schenkingen</li>
+                        <li>Financiële begeleiding bij echtscheiding</li>
+                        <li>Berekenen en aanvragen van toeslagen</li>
+                        <li>Opmaken van bezwaarschriften</li>
+                        <li>Aanvragen van uitkeringen</li>
+                      </ul>
+
                   </AccordionContent>
                 </AccordionItem>
 
@@ -78,16 +81,19 @@ export default function ParticuliereDienstverlening() {
                       op emotioneel of praktisch vlak. Deze begeleiding wordt
                       verzorgd door een professional met een diploma in social
                       work en ruime ervaring in het werken met:
-                      <Item>Mensen met niet-aangeboren hersenletsel (NAH)</Item>
-                      <Item>
-                        Ouderen die door leeftijd of gezondheid moeite hebben
-                        met het regelen van praktische zaken
-                      </Item>
-                      <Item>
-                        Mensen die behoefte hebben aan rust, overzicht of een
-                        vertrouwd aanspreekpunt bij levensveranderingen
-                      </Item>
-                    </p>
+                    </p>                      
+                      <ul className="list-disc list-inside space-y-1"> 
+                        <li>Mensen met niet-aangeboren hersenletsel (NAH)</li>
+                        <li>
+                          Ouderen die door leeftijd of gezondheid moeite hebben
+                          met het regelen van praktische zaken
+                        </li>
+                        <li>
+                          Mensen die behoefte hebben aan rust, overzicht of een
+                          vertrouwd aanspreekpunt bij levensveranderingen
+                        </li>
+                      </ul>
+
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

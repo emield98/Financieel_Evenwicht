@@ -66,13 +66,13 @@ export default function Tarieven() {
                     <TableCell className="font-medium">
                       Particuliere dienstverlening
                     </TableCell>
-                    <TableCell>€ 60,00</TableCell>
+                    <TableCell>vanaf € 60,00</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
                       Zakelijke dienstverlening
                     </TableCell>
-                    <TableCell>€ 60,00</TableCell>
+                    <TableCell>vanaf € 60,00</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -84,7 +84,7 @@ export default function Tarieven() {
                     <TableCell className="font-medium">
                       Individuele begeleiding
                     </TableCell>
-                    <TableCell>€ 50,00 <br /><i>De uiteindelijke kosten zijn afhankelijk van eventuele vergoedingen via de gemeente (Wmo of Wlz).</i></TableCell>
+                    <TableCell>vanaf € 50,00 <br /><i>De uiteindelijke kosten zijn afhankelijk van eventuele vergoedingen via de gemeente (Wmo of Wlz).</i></TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
