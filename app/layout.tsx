@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"
 import { ToastProvider } from "@/components/ui/toast"
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -16,7 +16,6 @@ const lora = Lora({ subsets: ["latin"], variable: "--font-lora" })
 export const metadata: Metadata = {
   title: "Financieel & Fiscaal Evenwicht",
   description: "Voor betrouwbare financiële en fiscale ondersteuning",
-    generator: 'v0.dev',
     icons: {
       icon: 'img/favicon.png', 
     },
@@ -43,6 +42,7 @@ export default function RootLayout({
 
           </ToastProvider> {/* 👈 sluiten */}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
