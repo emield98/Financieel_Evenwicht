@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Financieel & Fiscaal Evenwicht",
   description: "Voor betrouwbare financiële en fiscale ondersteuning",
     icons: {
-      icon: 'img/favicon.png', 
+      icon: '/favicon.png', 
     },
 }
 
