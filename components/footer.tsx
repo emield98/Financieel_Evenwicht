@@ -66,10 +66,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/diensten/zorgbeheer"
+                  href="/diensten/bewindvoering"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Financiële zorgbeheer
+                  Bewindvoering
                 </Link>
               </li>
             </ul>

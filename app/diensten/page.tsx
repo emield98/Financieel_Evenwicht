@@ -7,11 +7,11 @@ export default function Diensten() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-muted py-12">
+      <section className="page-header py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Onze Diensten</h1>
-          <div className="flex items-center text-sm text-muted-foreground mt-4">
-            <Link href="/" className="hover:underline">
+          <div className="flex items-center text-sm text-white/80 mt-4">
+            <Link href="/" className="hover:underline text-white">
               Home
             </Link>
             <span className="mx-2">/</span>
@@ -25,35 +25,28 @@ export default function Diensten() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-12">
             {/* Particuliere dienstverlening */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
+              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <Image src="/img/particulier_dienst.png" alt="Particuliere dienstverlening" fill className="object-cover" />
+              </div>
+              <div>
                 <h2 className="text-3xl font-bold mb-4">Particuliere dienstverlening</h2>
                 <p className="text-lg mb-6">
-                  Bij Financieel en Fiscaal Evenwicht ondersteunen we particulieren met uiteenlopende financiële
-                  vraagstukken. Van belastingaangiften en toeslagen tot begeleiding bij belangrijke levensgebeurtenissen
-                  zoals een scheiding. Onze persoonlijke aanpak zorgt ervoor dat u overzicht houdt en zich geen zorgen
-                  hoeft te maken over complexe administratieve zaken.
+                  Je kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
                     <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Aangifte inkomstenbelasting</span>
+                    <span>Financiële begeleiding</span>
                   </li>
                   <li className="flex items-start">
                     <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Toeslagen en heffingskortingen</span>
+                    <span>Belastingaangiften</span>
                   </li>
                   <li className="flex items-start">
                     <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Bezwaarschriften</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Uitkeringen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Financiële begeleiding bij echtscheiding</span>
+                    <span>Individuele begeleiding</span>
                   </li>
                 </ul>
                 <Button asChild className="bg-primary hover:bg-primary/90">
@@ -62,25 +55,34 @@ export default function Diensten() {
                   </Link>
                 </Button>
               </div>
+            </div>
+
+            <hr className="my-8" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="order-2 md:order-1">
+                <h2 className="text-3xl font-bold mb-4">Bewindvoering</h2>
+                <p className="text-lg mb-6">
+                  Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
+                </p>
+                <Button asChild className="bg-primary hover:bg-primary/90">
+                  <Link href="/diensten/bewindvoering">
+                    Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
-                <Image src="/img/margriet.png" alt="Particuliere dienstverlening" fill className="object-cover" />
+                <Image src="/img/bewindvoering.png" alt="bewindvoering" fill className="object-cover" />
               </div>
             </div>
 
             <hr className="my-8" />
 
-            {/* Zakelijke dienstverlening */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <Image src="/img/finadm.png" alt="Zakelijke dienstverlening" fill className="object-cover" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Zakelijke dienstverlening</h2>
+              <div className="order-2 md:order-1">
+                <h2 className="text-3xl font-bold mb-4">zakelijke dienstverlening</h2>
                 <p className="text-lg mb-6">
-                  Voor ondernemers en bedrijven bieden wij complete financiële en fiscale ondersteuning. Van het
-                  bijhouden van uw administratie tot het verzorgen van uw belastingaangiften en jaarrekeningen. Wij
-                  zorgen ervoor dat u altijd inzicht heeft in uw financiële situatie en voldoet aan alle wettelijke
-                  verplichtingen.
+                  Wij ondersteunen zzp’ers en mkb’ers met hun administratie, belastingaangiften en financiële planning. Ook voor startersbegeleiding, loonadministratie en advies op maat kunt u bij ons terecht.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -110,45 +112,8 @@ export default function Diensten() {
                   </Link>
                 </Button>
               </div>
-            </div>
-
-            <hr className="my-8" />
-
-            {/* Financiële zorgbeheer */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <h2 className="text-3xl font-bold mb-4">Financiële zorgbeheer</h2>
-                <p className="text-lg mb-6">
-                  Onze specialiteit ligt in financiële zorgbeheer, waaronder ouderenadministratie en beschermingsbewind.
-                  We hebben ruime ervaring in de financiële begeleiding van cliënten, waaronder mensen die getroffen
-                  zijn door niet-aangeboren hersenletsel zoals MS, hersenbloeding, Parkinson of Alzheimer.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Ouderenadministratie</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Beschermingsbewind</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Budgetbeheer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Financiële begeleiding bij ziekte</span>
-                  </li>
-                </ul>
-                <Button asChild className="bg-primary hover:bg-primary/90">
-                  <Link href="/diensten/zorgbeheer">
-                    Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
-                <Image src="/img/finadmfis.png" alt="Financiële zorgbeheer" fill className="object-cover" />
+                <Image src="/img/zakelijk.png" alt="Particuliere dienstverlening" fill className="object-cover" />
               </div>
             </div>
           </div>

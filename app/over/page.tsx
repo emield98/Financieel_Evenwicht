@@ -108,10 +108,14 @@ export default function OverOns() {
               <p className="text-lg">
                 Om een veilige, prettige en professionele samenwerking te waarborgen, hanteren wij een gedragscode. Deze omvat onder andere:
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Respectvolle omgang met elkaar, ongeacht achtergrond of overtuiging</li>
-                  <li>Geen ruimte voor discriminatie, intimidatie of grensoverschrijdend gedrag</li>
-                  <li>Geen gebruik van alcohol of drugs tijdens begeleiding</li>
-                  <li>Rookvrij beleid, tenzij uitdrukkelijk anders afgesproken</li>
+                  <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Respectvolle omgang met elkaar, ongeacht achtergrond of overtuiging</li>
+                  <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen ruimte voor discriminatie, intimidatie of grensoverschrijdend gedrag</li>
+                  <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen gebruik van alcohol of drugs tijdens begeleiding</li>
+                  <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Rookvrij beleid, tenzij uitdrukkelijk anders afgesproken</li>
                 </ul>
               </p>
               <p className="text-lg">

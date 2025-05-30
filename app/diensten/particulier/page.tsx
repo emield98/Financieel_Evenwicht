@@ -59,14 +59,22 @@ export default function ParticuliereDienstverlening() {
                       U kunt onder andere bij ons terecht voor:
                     </p>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Belastingaangifte</li>
-                        <li>Overlijdensaangifte</li>
-                        <li>Successieaangifte</li>
-                        <li>Ondersteuning bij schenkingen</li>
-                        <li>Financiële begeleiding bij echtscheiding</li>
-                        <li>Berekenen en aanvragen van toeslagen</li>
-                        <li>Opmaken van bezwaarschriften</li>
-                        <li>Aanvragen van uitkeringen</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Belastingaangifte</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Overlijdensaangifte</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Successieaangifte</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Ondersteuning bij schenkingen</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Financiële begeleiding bij echtscheiding</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Berekenen en aanvragen van toeslagen</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Opmaken van bezwaarschriften</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Aanvragen van uitkeringen</li>
                       </ul>
 
                   </AccordionContent>
@@ -83,12 +91,15 @@ export default function ParticuliereDienstverlening() {
                       work en ruime ervaring in het werken met:
                     </p>                      
                       <ul className="list-disc list-inside space-y-1"> 
-                        <li>Mensen met niet-aangeboren hersenletsel (NAH)</li>
-                        <li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Mensen met niet-aangeboren hersenletsel (NAH)</li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
                           Ouderen die door leeftijd of gezondheid moeite hebben
                           met het regelen van praktische zaken
                         </li>
-                        <li>
+                        <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
                           Mensen die behoefte hebben aan rust, overzicht of een
                           vertrouwd aanspreekpunt bij levensveranderingen
                         </li>
@@ -160,15 +171,12 @@ export default function ParticuliereDienstverlening() {
               </Button>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Financiële zorgbeheer</h3>
+              <h3 className="text-xl font-bold mb-4">Bewindvoering</h3>
               <p className="mb-6">
-                Onze specialiteit ligt in financiële zorgbeheer, waaronder
-                ouderenadministratie en beschermingsbewind. We hebben ruime
-                ervaring in de financiële begeleiding van cliënten met
-                specifieke zorgbehoeften.
+                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
               </p>
               <Button asChild variant="outline">
-                <Link href="/diensten/zorgbeheer">
+                <Link href="/diensten/bewindvoering">
                   Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

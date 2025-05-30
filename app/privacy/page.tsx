@@ -50,15 +50,24 @@ export default function Privacy() {
               ons verstrekt. Hieronder vindt u een overzicht van de persoonsgegevens die wij verwerken:
             </p>
             <ul className="list-disc pl-6 mb-8 space-y-2">
-              <li>Voor- en achternaam</li>
-              <li>Geslacht</li>
-              <li>Geboortedatum</li>
-              <li>Adresgegevens</li>
-              <li>Telefoonnummer</li>
-              <li>E-mailadres</li>
-              <li>Bankrekeningnummer</li>
-              <li>Overige persoonsgegevens die u actief verstrekt in correspondentie en telefonisch</li>
-              <li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Voor- en achternaam</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geslacht</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geboortedatum</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Adresgegevens</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Telefoonnummer</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />E-mailadres</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Bankrekeningnummer</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Overige persoonsgegevens die u actief verstrekt in correspondentie en telefonisch</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
                 Financiële gegevens zoals inkomsten, uitgaven, schulden, vermogen, belastingaangiften en toeslagen
               </li>
             </ul>
@@ -66,14 +75,19 @@ export default function Privacy() {
             <h2 className="text-2xl font-bold mb-4">3. Waarom verzamelen wij deze gegevens</h2>
             <p className="mb-4">Wij verwerken uw persoonsgegevens voor de volgende doelen:</p>
             <ul className="list-disc pl-6 mb-8 space-y-2">
-              <li>Het afhandelen van uw betaling</li>
-              <li>U te kunnen bellen of e-mailen indien dit nodig is om onze dienstverlening uit te kunnen voeren</li>
-              <li>U te informeren over wijzigingen van onze diensten en producten</li>
-              <li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Het afhandelen van uw betaling</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />U te kunnen bellen of e-mailen indien dit nodig is om onze dienstverlening uit te kunnen voeren</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />U te informeren over wijzigingen van onze diensten en producten</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
                 Het verzorgen van uw financiële administratie, belastingaangiften, jaarrekeningen en andere financiële
                 diensten
               </li>
-              <li>Het voldoen aan wettelijke verplichtingen, zoals de bewaarplicht voor administraties</li>
+              <li className="flex items-start">
+<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Het voldoen aan wettelijke verplichtingen, zoals de bewaarplicht voor administraties</li>
             </ul>
 
             <h2 className="text-2xl font-bold mb-4">4. Hoe lang bewaren wij uw gegevens</h2>

@@ -207,13 +207,12 @@ export default function ZakelijkeDienstverlening() {
               </Button>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Financiële zorgbeheer</h3>
+              <h3 className="text-xl font-bold mb-4">Bewindvoering</h3>
               <p className="mb-6">
-                Onze specialiteit ligt in financiële zorgbeheer, waaronder ouderenadministratie en beschermingsbewind.
-                We hebben ruime ervaring in de financiële begeleiding van cliënten met specifieke zorgbehoeften.
+                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
               </p>
               <Button asChild variant="outline">
-                <Link href="/diensten/zorgbeheer">
+                <Link href="/diensten/bewindvoering">
                   Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

@@ -136,14 +136,14 @@ export default function Navbar() {
                   Zakelijke dienstverlening
                 </Link>
                 <Link
-                  href="/diensten/zorgbeheer"
+                  href="/diensten/bewindvoering"
                   className={cn(
                     "block py-1 px-2 rounded-md",
-                    pathname === "/diensten/zorgbeheer" ? "bg-primary text-white" : "hover:bg-muted",
+                    pathname === "/diensten/bewindvoering" ? "bg-primary text-white" : "hover:bg-muted",
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Financiële zorgbeheer
+                  bewindvoering
                 </Link>
               </div>
             </div>
