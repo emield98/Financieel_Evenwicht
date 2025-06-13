@@ -51,7 +51,7 @@ export default function Navbar() {
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     <ListItem href="/diensten/particulier" title="Particuliere dienstverlening">
-                      Belastingaangiften, toeslagen en financieel advies voor particulieren
+                      Belastingaangiften, toeslagen en financiële begeleiding
                     </ListItem>
                     <ListItem href="/diensten/zakelijk" title="Zakelijke dienstverlening">
                       Administratie, belastingaangiften en advies voor ondernemers

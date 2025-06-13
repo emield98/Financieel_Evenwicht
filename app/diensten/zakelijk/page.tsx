@@ -55,7 +55,7 @@ export default function ZakelijkeDienstverlening() {
                 </AccordionItem>
 
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>Belastingaangiften (BTW, IB, VPB)</AccordionTrigger>
+                  <AccordionTrigger>Belastingaangiften (BTW, IB)</AccordionTrigger>
                   <AccordionContent>
                     <p className="mb-4">
                       Wij verzorgen alle belastingaangiften voor uw onderneming, waaronder BTW-aangiften,

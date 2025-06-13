@@ -33,7 +33,7 @@ export default function Diensten() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Particuliere dienstverlening</h2>
                 <p className="text-lg mb-6">
-                  Je kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft.
+                  U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -91,7 +91,7 @@ export default function Diensten() {
                   </li>
                   <li className="flex items-start">
                     <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Belastingaangiften (BTW, IB, VPB)</span>
+                    <span>Belastingaangiften (BTW, IB)</span>
                   </li>
                   <li className="flex items-start">
                     <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />

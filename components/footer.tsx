@@ -13,7 +13,7 @@ export default function Footer() {
               <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={180} height={70} />
             </Link>
             <p className="text-muted-foreground text-sm">
-              Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie, belastingaangiften en financieel advies.
+              Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie, belastingaangiften en financieel zorgbeheer.
             </p>
           </div>
 

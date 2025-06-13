@@ -18,7 +18,7 @@ export default function Home() {
               <p className="text-lg md:text-xl max-w-md">
                 Voor betrouwbare financiële en fiscale ondersteuning sinds 2008.
                 Wij helpen u met uw administratie, belastingaangiften en
-                financieel advies.
+                financieel zorgbeheer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <ServiceCard
               title="Particuliere dienstverlening"
-              description="Je kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft."
+              description="U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft."
               imageSrc="img/particulier_dienst.png"
               href="/diensten/particulier"
             />
