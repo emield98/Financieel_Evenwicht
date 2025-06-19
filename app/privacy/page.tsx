@@ -41,7 +41,7 @@ export default function Privacy() {
               <br />
               Telefoonnummer: +316 517 405 38
               <br />
-              E-mail: info@financieelevenwicht.nl
+              E-mail: financieel.evenwicht@home.nl
             </p>
 
             <h2 className="text-2xl font-bold mb-4">2. Welke gegevens verzamelen wij</h2>
@@ -110,7 +110,7 @@ export default function Privacy() {
               de verwerking van uw persoonsgegevens door Financieel en Fiscaal Evenwicht en heeft u het recht op
               gegevensoverdraagbaarheid. U kunt een verzoek tot inzage, correctie, verwijdering, gegevensoverdraging van
               uw persoonsgegevens of verzoek tot intrekking van uw toestemming of bezwaar op de verwerking van uw
-              persoonsgegevens sturen naar info@financieelevenwicht.nl.
+              persoonsgegevens sturen naar financieel.evenwicht@home.nl.
             </p>
 
             <h2 className="text-2xl font-bold mb-4">8. Hoe wij persoonsgegevens beveiligen</h2>
@@ -118,7 +118,7 @@ export default function Privacy() {
               Financieel en Fiscaal Evenwicht neemt de bescherming van uw gegevens serieus en neemt passende maatregelen
               om misbruik, verlies, onbevoegde toegang, ongewenste openbaarmaking en ongeoorloofde wijziging tegen te
               gaan. Als u de indruk heeft dat uw gegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik,
-              neem dan contact op via info@financieelevenwicht.nl.
+              neem dan contact op via financieel.evenwicht@home.nl.
             </p>
 
             <h2 className="text-2xl font-bold mb-4">9. Wijzigingen in het privacybeleid</h2>

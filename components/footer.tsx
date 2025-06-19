@@ -96,10 +96,10 @@ export default function Footer() {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
                 <a
-                  href="mailto:info@financieelevenwicht.nl"
+                  href="mailto:financieel.evenwicht@home.nl"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  info@financieelevenwicht.nl
+                  financieel.evenwicht@home.nl
                 </a>
               </li>
             </ul>
