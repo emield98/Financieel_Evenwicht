@@ -31,9 +31,7 @@ export default function ZakelijkeDienstverlening() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <p className="text-lg mb-8">
-                Voor ondernemers en bedrijven bied ik complete financiële en fiscale ondersteuning. Van het bijhouden
-                van uw administratie tot het verzorgen van uw belastingaangiften en jaarrekeningen. Ik zorg ervoor dat u
-                altijd inzicht heeft in uw financiële situatie en voldoet aan alle wettelijke verplichtingen.
+                Voor ondernemers en bedrijven bieden wij complete financiële en fiscale ondersteuning. Van het bijhouden van uw administratie tot het verzorgen van uw belastingaangiften en jaarrekeningen. We zorgen ervoor dat u altijd inzicht heeft in uw financiële situatie en voldoet aan alle wettelijke verplichtingen.
               </p>
 
               <h2 className="text-3xl font-bold mb-6">Onze Zakelijke Diensten</h2>
@@ -160,22 +158,20 @@ export default function ZakelijkeDienstverlening() {
                 <Link href="/contact" className="text-primary hover:underline">
                   contact
                 </Link>{" "}
-                met mij op voor een vrijblijvend gesprek. Ik denk graag met u mee over de beste oplossing voor uw
-                onderneming.
+                op voor een vrijblijvend gesprek. We denken graag met u mee over de beste oplossing voor uw onderneming.
               </p>
             </div>
 
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
                 <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                  <Image src="/img/finadm.png" alt="Zakelijke dienstverlening" fill className="object-cover" />
+                  <Image src="/img/margriet.png" alt="Zakelijke dienstverlening" fill className="object-cover" />
                 </div>
 
                 <div className="sm: bg-primary lg:bg-primary/70 text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Zakelijk advies</h3>
                   <p className="mb-6">
-                    Wilt u weten wat ik voor uw onderneming kan betekenen? Neem contact op voor een vrijblijvend
-                    gesprek.
+                    Wilt u weten wat wij voor uw onderneming kunnen betekenen? Neem contact op voor een vrijblijvend gesprek.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
                     <Link href="/contact">
@@ -209,7 +205,7 @@ export default function ZakelijkeDienstverlening() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">Bewindvoering</h3>
               <p className="mb-6">
-                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
+              Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden. We kijken samen met u wat het beste past bij uw persoonlijke situatie.
               </p>
               <Button asChild variant="outline">
                 <Link href="/diensten/bewindvoering">

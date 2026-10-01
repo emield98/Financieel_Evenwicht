@@ -60,29 +60,29 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Wij bieden een breed scala aan financiële en fiscale diensten voor
-              particulieren en bedrijven.
+              particulieren en bedrijven
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ServiceCard
               title="Particuliere dienstverlening"
-              description="U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft."
-              imageSrc="img/particulier_dienst.png"
+              description="U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH: altijd afgestemd op wat u nodig heeft."
+              imageSrc="img/card/part_dienst.jpg"
               href="/diensten/particulier"
             />
 
             <ServiceCard
               title="Bewindvoering"
-              description="Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie."
-              imageSrc="/img/bewindvoering.png"
+              description="Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden. We kijken samen met u wat het beste past bij uw persoonlijke situatie."
+              imageSrc="/img/card/bewind.jpg"
               href="/diensten/bewindvoering"
             />
 
             <ServiceCard
               title="Zakelijke dienstverlening "
               description="Wij ondersteunen zzp’ers en mkb’ers met hun administratie, belastingaangiften en financiële planning. Ook voor startersbegeleiding, loonadministratie en advies op maat kunt u bij ons terecht."
-              imageSrc="/img/zakelijk.png"
+              imageSrc="/img/card/zak_dienst.jpg"
               href="/diensten/zakelijk"
             />
           </div>
@@ -96,12 +96,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
             <div className="relative h-[550px] rounded-lg overflow-hidden shadow-xl">
-                <Image
-                  src="/img/finadmfis.png"
-                  alt="Over Financieel Evenwicht"
-                  fill
-                  className="object-cover"
-                />
+              <Image
+                src="/img/finadmfis.png"
+                alt="Over Financieel Evenwicht"
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

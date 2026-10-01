@@ -253,6 +253,7 @@ export default function Contact() {
                         <p>
                           <strong>Zondag:</strong> Gesloten
                         </p>
+                        <p><i>Ons kantoor is enkel op afspraak geopend</i></p>
                       </div>
                     </div>
                   </div>

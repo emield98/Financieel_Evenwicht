@@ -40,13 +40,7 @@ export default function Tarieven() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg mb-8 text-center">
-              Wij hanteren eerlijke en transparante tarieven. Hieronder vindt u
-              een overzicht per dienst. Voor maatwerk en specifieke vragen kunt
-              u altijd{" "}
-              <Link href="/contact" className="text-primary hover:underline">
-                contact
-              </Link>{" "}
-              met mij opnemen.
+            Wij hanteren eerlijke en transparante tarieven. Hieronder vindt u een overzicht per dienst. Voor maatwerk en specifieke vragen kunt u altijd <Link href="/contact" className="text-primary hover:underline">contact opnemen</Link>.{" "}
             </p>
 
             <h2 className="text-3xl font-bold mb-8 text-center">
@@ -97,10 +91,6 @@ export default function Tarieven() {
                 specifieke situatie en wensen kunnen er een tarief op maat
                 aanbieden. Neem contact met ons op voor een vrijblijvende
                 offerte.
-              </p>
-              <p>
-                Voor langdurige samenwerking bied ik aantrekkelijke abonnementen
-                aan. Vraag naar de mogelijkheden.
               </p>
             </div>
 

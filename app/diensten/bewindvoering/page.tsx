@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight, CheckCircle, Heart } from "lucide-react";
 
 export default function bewindvoering() {
   return (
@@ -86,7 +86,7 @@ export default function bewindvoering() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-muted p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <Heart className="h-6 w-6 text-primary mr-2" />
+                    <CheckCircle className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" />
                     <h3 className="text-xl font-bold">Persoonlijke aandacht</h3>
                   </div>
                   <p>
@@ -97,7 +97,7 @@ export default function bewindvoering() {
 
                 <div className="bg-muted p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <Heart className="h-6 w-6 text-primary mr-2" />
+                    <CheckCircle className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" />
                     <h3 className="text-xl font-bold">Transparantie</h3>
                   </div>
                   <p>
@@ -108,7 +108,7 @@ export default function bewindvoering() {
 
                 <div className="bg-muted p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <Heart className="h-6 w-6 text-primary mr-2" />
+                    <CheckCircle className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" />
                     <h3 className="text-xl font-bold">Deskundigheid</h3>
                   </div>
                   <p>
@@ -119,7 +119,7 @@ export default function bewindvoering() {
 
                 <div className="bg-muted p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <Heart className="h-6 w-6 text-primary mr-2" />
+                    <CheckCircle className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" />
                     <h3 className="text-xl font-bold">Continuïteit</h3>
                   </div>
                   <p>
@@ -135,8 +135,7 @@ export default function bewindvoering() {
                 <Link href="/contact" className="text-primary hover:underline">
                   contact
                 </Link>{" "}
-                met mij op voor een vrijblijvend gesprek. Ik denk graag met u
-                mee over de beste oplossing voor uw situatie.
+                met mij op voor een vrijblijvend gesprek. We denken graag met u mee over de beste oplossing voor uw situatie.
               </p>
             </div>
 
@@ -156,8 +155,7 @@ export default function bewindvoering() {
                     Persoonlijk gesprek
                   </h3>
                   <p className="mb-6">
-                    Wilt u weten wat ik voor u of uw naaste kan betekenen? Neem
-                    contact op voor een vrijblijvend gesprek.
+                    Wilt u weten wat wij voor u of uw naasten kunnen betekenen? Neem contact op voor een vrijblijvend gesprek.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
                     <Link href="/contact">

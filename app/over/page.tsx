@@ -28,18 +28,12 @@ export default function OverOns() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-6">
               <blockquote className="mb-12 text-center max-w-3xl rounded-xl border-l-4 border-primary px-6 py-6 md:text-2xl font-semibold shadow-sm">
-                Betrokken, betrouwbaar en mensgericht — <br />dat is waar Financieel
-                en Fiscaal Evenwicht voor staat.
+                Betrokken, betrouwbaar en mensgericht
               </blockquote>
               <h2 className="text-3xl font-bold mb-6">Mijn Achtergrond</h2>
 
               <p className="text-lg">
-                Sinds 2008 biedt Financieel en Fiscaal Evenwicht ondersteuning
-                aan particulieren, zzp’ers en mkb’ers. Oprichter Margriet
-                Doornbosch combineert meer dan 16 jaar ervaring bij ABN AMRO met
-                kennis uit de praktijk. Deze brede achtergrond maakt het
-                mogelijk om klanten zowel financieel als persoonlijk te
-                begeleiden — met discretie, betrokkenheid en vakkennis.
+                Sinds 2008 biedt Financieel en Fiscaal Evenwicht ondersteuning aan particulieren, zzp’ers en mkb’ers. Oprichtster Margriet Doornbosch combineert meer dan 16 jaar ervaring bij ABN AMRO met kennis uit de praktijk. Deze brede achtergrond maakt het mogelijk om klanten zowel financieel als persoonlijk te begeleiden.
               </p>
 
               <p className="text-lg">
@@ -109,13 +103,13 @@ export default function OverOns() {
                 Om een veilige, prettige en professionele samenwerking te waarborgen, hanteren wij een gedragscode. Deze omvat onder andere:
                 <ul className="list-disc list-inside space-y-2">
                   <li className="flex items-start">
-<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Respectvolle omgang met elkaar, ongeacht achtergrond of overtuiging</li>
+                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Respectvolle omgang met elkaar, ongeacht achtergrond of overtuiging</li>
                   <li className="flex items-start">
-<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen ruimte voor discriminatie, intimidatie of grensoverschrijdend gedrag</li>
+                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen ruimte voor discriminatie, intimidatie of grensoverschrijdend gedrag</li>
                   <li className="flex items-start">
-<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen gebruik van alcohol of drugs tijdens begeleiding</li>
+                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Geen gebruik van alcohol of drugs tijdens begeleiding</li>
                   <li className="flex items-start">
-<ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Rookvrij beleid, tenzij uitdrukkelijk anders afgesproken</li>
+                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Rookvrij beleid, tenzij uitdrukkelijk anders afgesproken</li>
                 </ul>
               </p>
               <p className="text-lg">
@@ -137,8 +131,7 @@ export default function OverOns() {
                 <div className="sm: bg-primary lg:bg-primary/70 text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Neem Contact Op</h3>
                   <p className="mb-6">
-                    Heeft u vragen of wilt u een afspraak maken? Neem gerust
-                    contact met mij op.
+                    Heeft u vragen of wilt u een afspraak maken? Neem gerust contact op.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
                     <Link href="/contact">

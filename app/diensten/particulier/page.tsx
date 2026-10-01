@@ -39,13 +39,7 @@ export default function ParticuliereDienstverlening() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <p className="text-lg mb-8">
-                Wij helpen u graag bij uw financiële vragen en bieden
-                persoonlijke begeleiding wanneer het even niet alleen lukt. Bij
-                ons kunt u terecht voor ondersteuning in verschillende
-                levenssituaties — of het nu om financiële zaken gaat of om
-                bredere, persoonlijke begeleiding. Met een combinatie van
-                vakkennis en oprechte aandacht staan we naast u in lastige
-                periodes en belangrijke momenten.
+                Wij helpen u graag bij uw belastingaangifte en uiteenlopende financiële vragen. Daarnaast bieden we persoonlijke begeleiding wanneer u er alleen even niet uitkomt, zowel op financieel vlak als daarbuiten. Met een combinatie van vakkennis en oprechte aandacht staan we naast u tijdens lastige periodes en op belangrijke momenten in uw leven.
               </p>
 
               <h2 className="text-3xl font-bold mb-6">Onze Diensten</h2>
@@ -89,11 +83,7 @@ export default function ParticuliereDienstverlening() {
                   <AccordionTrigger>Individuele begeleiding</AccordionTrigger>
                   <AccordionContent>
                     <p className="mb-4">
-                      Naast financiële ondersteuning bieden wij ook persoonlijke
-                      begeleiding — soms in combinatie met geldzaken, soms puur
-                      op emotioneel of praktisch vlak. Deze begeleiding wordt
-                      verzorgd door een professional met een diploma in social
-                      work en ruime ervaring in het werken met:
+                      Naast financiële begeleiding bieden wij persoonlijke begeleiding die volledig aansluit op uw wensen en behoeften. Deze begeleiding kan zich richten op diverse gebieden; denk hierbij aan praktische of emotionele ondersteuning in het dagelijkse leven, al dan niet in combinatie met uw geldzaken. Dankzij onze ruime ervaring en de juiste diploma's bieden wij gespecialiseerde hulp aan:
                     </p>
                     <ul className="list-disc list-inside space-y-1">
                       <li className="flex items-start">
@@ -119,8 +109,7 @@ export default function ParticuliereDienstverlening() {
                 <Link href="/contact" className="text-primary hover:underline">
                   contact
                 </Link>{" "}
-                met ons op — we luisteren graag naar uw verhaal en kijken samen
-                wat we voor u kunnen betekenen.
+                met ons op. We luisteren graag naar uw verhaal en kijken samen wat we voor u kunnen betekenen.
               </p>
             </div>
 
@@ -178,7 +167,7 @@ export default function ParticuliereDienstverlening() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">Bewindvoering</h3>
               <p className="mb-6">
-                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
+                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden. We kijken samen met u wat het beste past bij uw persoonlijke situatie.
               </p>
               <Button asChild variant="outline">
                 <Link href="/diensten/bewindvoering">
