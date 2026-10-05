@@ -3,15 +3,50 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+const services = [
+  {
+    title: "Particuliere dienstverlening",
+    description:
+      "U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH: altijd afgestemd op wat u nodig heeft.",
+    points: ["Financiële begeleiding", "Individuele begeleiding"],
+    href: "/diensten/particulier",
+    image: "/img/card/part_dienst.jpg",
+    imageAlt: "Particuliere dienstverlening",
+  },
+  {
+    title: "Bewindvoering",
+    description:
+      "Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden. We kijken samen met u wat het beste past bij uw persoonlijke situatie.",
+    points: ["Vaste lasten betalen", "Bankrekeningen beheren", "Het aanvragen van toeslagen en uitkeringen", "Het aflossen van schulden (indien mogelijk)", "Een overzichtelijk budgetplan"],
+    href: "/diensten/bewindvoering",
+    image: "/img/card/bewind.jpg",
+    imageAlt: "Bewindvoering",
+  },
+  {
+    title: "Zakelijke dienstverlening",
+    description:
+      "Wij ondersteunen zzp’ers en mkb’ers met hun administratie, belastingaangiften en financiële planning. Ook voor startersbegeleiding, loonadministratie en advies op maat kunt u bij ons terecht.",
+    points: [
+      "Financiële administratie",
+      "Belastingaangiften (BTW, IB)",
+      "Jaarrekeningen",
+      "Debiteurenbeheer",
+      "Startersbegeleiding",
+    ],
+    href: "/diensten/zakelijk",
+    image: "/img/card/zak_dienst.jpg",
+    imageAlt: "Zakelijke dienstverlening",
+  },
+]
+
 export default function Diensten() {
   return (
     <>
-      {/* Page Header */}
       <section className="page-header py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Onze Diensten</h1>
-          <div className="flex items-center text-sm text-white/80 mt-4">
-            <Link href="/" className="hover:underline text-white">
+          <h1 className="text-4xl md:text-5xl font-bold">Onze diensten</h1>
+          <div className="mt-4 flex items-center text-sm text-white/80">
+            <Link href="/" className="text-white hover:underline">
               Home
             </Link>
             <span className="mx-2">/</span>
@@ -20,115 +55,66 @@ export default function Diensten() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-12">
-            {/* Particuliere dienstverlening */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <Image src="/img/particulier_dienst.png" alt="Particuliere dienstverlening" fill className="object-cover" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Particuliere dienstverlening</h2>
-                <p className="text-lg mb-6">
-                  U kunt bij ons terecht met financiële vraagstukken, maar ook voor persoonlijke begeleiding wanneer het even niet alleen lukt. Van belastingaangifte tot ondersteuning bij NAH of ouderenzorg — altijd afgestemd op wat u nodig heeft.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Financiële begeleiding</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Belastingaangiften</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Individuele begeleiding</span>
-                  </li>
-                </ul>
-                <Button asChild className="bg-primary hover:bg-primary/90">
-                  <Link href="/diensten/particulier">
-                    Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
+      {services.map((service, index) => {
+        const imageFirst = index % 2 === 0
 
-            <hr className="my-8" />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <h2 className="text-3xl font-bold mb-4">Bewindvoering</h2>
-                <p className="text-lg mb-6">
-                  Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden — we kijken samen met u wat het beste past bij uw persoonlijke situatie.
-                </p>
-                <Button asChild className="bg-primary hover:bg-primary/90">
-                  <Link href="/diensten/bewindvoering">
-                    Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
-                <Image src="/img/bewindvoering.png" alt="bewindvoering" fill className="object-cover" />
+        return (
+          <section
+            key={service.href}
+            className={index % 2 === 1 ? "bg-muted/40" : "bg-white"}
+          >
+            <div className="container mx-auto px-4 py-14 md:py-20">
+              <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
+                <div
+                  className={`relative aspect-[4/3] overflow-hidden rounded-xl shadow-md ${
+                    imageFirst ? "" : "md:order-2"
+                  }`}
+                >
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <div className={imageFirst ? "" : "md:order-1"}>
+                  <h2 className="mb-4 text-3xl font-bold">{service.title}</h2>
+                  <p className="mb-6 text-lg text-muted-foreground">
+                    {service.description}
+                  </p>
+                  <ul className="mb-8 space-y-3">
+                    {service.points.map((point) => (
+                      <li key={point} className="flex items-start">
+                        <ArrowRight className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="bg-primary hover:bg-primary/90">
+                    <Link href={service.href}>
+                      Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
+          </section>
+        )
+      })}
 
-            <hr className="my-8" />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <h2 className="text-3xl font-bold mb-4">zakelijke dienstverlening</h2>
-                <p className="text-lg mb-6">
-                  Wij ondersteunen zzp’ers en mkb’ers met hun administratie, belastingaangiften en financiële planning. Ook voor startersbegeleiding, loonadministratie en advies op maat kunt u bij ons terecht.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Financiële administratie</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Belastingaangiften (BTW, IB)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Jaarrekeningen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Debiteurenbeheer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                    <span>Startersbegeleiding</span>
-                  </li>
-                </ul>
-                <Button asChild className="bg-primary hover:bg-primary/90">
-                  <Link href="/diensten/zakelijk">
-                    Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
-                <Image src="/img/zakelijk.png" alt="Particuliere dienstverlening" fill className="object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="bg-primary py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Klaar om uw financiën op orde te brengen?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Neem vandaag nog contact met ons op voor een vrijblijvend gesprek over hoe wij u kunnen helpen.
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+            Klaar om uw financiën op orde te brengen?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-xl">
+            Neem vandaag nog contact met ons op voor een vrijblijvend gesprek
+            over hoe wij u kunnen helpen.
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Contact Opnemen</Link>
+            <Link href="/contact">Contact opnemen</Link>
           </Button>
         </div>
       </section>

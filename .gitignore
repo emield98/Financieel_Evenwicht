@@ -52,3 +52,4 @@ __snapshots__/
 
 # Optional: ignore .next/ if using Next.js
 .next/
+out/
