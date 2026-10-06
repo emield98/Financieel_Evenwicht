@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -13,24 +11,27 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, imageSrc, href }: ServiceCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
-      <div className="relative h-48">
-        <Image src={imageSrc || "/placeholder.svg"} alt={title} fill className="object-cover" />
+    <article className="group flex h-full flex-col border border-[#e6dfdb] bg-white">
+      <div className="relative h-44 overflow-hidden">
+        <Image
+          src={imageSrc || "/placeholder.svg"}
+          alt={title}
+          fill
+          className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          sizes="(min-width: 768px) 30vw, 100vw"
+        />
       </div>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
-      <CardFooter className="mt-auto">
-        <Button asChild variant="outline" className="w-full group">
-          <Link href={href}>
-            Meer informatie
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
-  );
+      <div className="flex flex-1 flex-col px-6 py-6">
+        <h3 className="text-xl font-semibold leading-snug text-foreground">{title}</h3>
+        <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{description}</p>
+        <Link
+          href={href}
+          className="mt-6 inline-flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80"
+        >
+          Meer informatie
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </div>
+    </article>
+  )
 }

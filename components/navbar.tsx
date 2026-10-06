@@ -11,45 +11,65 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { usePathname } from "next/navigation"
 
+const navItemClass = (active: boolean) =>
+  cn(
+    "group relative inline-flex h-11 items-center justify-center rounded-md bg-transparent px-3.5 text-[15px] font-medium tracking-wide text-foreground/75 transition-colors",
+    "hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30",
+    "data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary",
+    "after:pointer-events-none after:absolute after:inset-x-3.5 after:bottom-1 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-primary after:transition-transform after:duration-200",
+    "hover:after:scale-x-100 data-[state=open]:after:scale-x-100",
+    active && "text-primary after:scale-x-100",
+  )
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
+  const dienstenActive = pathname.startsWith("/diensten")
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={180} height={70} />
+    <header className="sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="container flex h-24 items-center justify-between gap-4 lg:h-28 lg:gap-6">
+        <Link href="/" className="flex shrink-0 items-center py-2">
+          <Image
+            src="/img/fin_logo.png"
+            alt="Financieel & Fiscaal Evenwicht"
+            width={288}
+            height={100}
+            priority
+            className="h-20 w-auto lg:h-[5.5rem]"
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex lg:items-center">
           <NavigationMenu delayDuration={999999}>
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-0.5">
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} active={pathname === "/"}>
+                  <NavigationMenuLink className={navItemClass(pathname === "/")} active={pathname === "/"}>
                     Home
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/over" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} active={pathname === "/over"}>
+                  <NavigationMenuLink className={navItemClass(pathname === "/over")} active={pathname === "/over"}>
                     Over ons
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={navItemClass(dienstenActive)}>
+                  Diensten
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[420px] gap-1 p-3">
                     <ListItem href="/diensten/particulier" title="Particuliere dienstverlening">
                       Belastingaangiften, toeslagen en financiële begeleiding
                     </ListItem>
@@ -64,14 +84,14 @@ export default function Navbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/tarieven" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} active={pathname === "/tarieven"}>
+                  <NavigationMenuLink className={navItemClass(pathname === "/tarieven")} active={pathname === "/tarieven"}>
                     Tarieven
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} active={pathname === "/contact"}>
+                  <NavigationMenuLink className={navItemClass(pathname === "/contact")} active={pathname === "/contact"}>
                     Contact
                   </NavigationMenuLink>
                 </Link>
@@ -81,8 +101,15 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="lg:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-11 w-11 rounded-full text-primary hover:bg-primary/10 hover:text-primary"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Menu sluiten" : "Menu openen"}
+            aria-expanded={isMenuOpen}
+          >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -90,87 +117,65 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="container py-4 space-y-1">
-            <Link
-              href="/"
-              className={cn(
-                "block py-2 px-3 rounded-md",
-                pathname === "/" ? "bg-primary text-white" : "hover:bg-muted",
-              )}
-              onClick={() => setIsMenuOpen(false)}
-            >
+        <div className="border-t border-primary/10 bg-white lg:hidden">
+          <div className="container space-y-1 py-3">
+            <MobileLink href="/" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Home
-            </Link>
-            <Link
-              href="/over"
-              className={cn(
-                "block py-2 px-3 rounded-md",
-                pathname === "/over" ? "bg-primary text-white" : "hover:bg-muted",
-              )}
-              onClick={() => setIsMenuOpen(false)}
-            >
+            </MobileLink>
+            <MobileLink href="/over" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Over ons
-            </Link>
-            <div className="py-2 px-3">
-              <div className="font-medium">Diensten</div>
-              <div className="pl-4 mt-1 space-y-1 border-l-2 border-muted">
-                <Link
-                  href="/diensten/particulier"
-                  className={cn(
-                    "block py-1 px-2 rounded-md",
-                    pathname === "/diensten/particulier" ? "bg-primary text-white" : "hover:bg-muted",
-                  )}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+            </MobileLink>
+            <div className="px-3 py-2">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary/80">Diensten</div>
+              <div className="mt-2 space-y-1 border-l-2 border-primary/20 pl-3">
+                <MobileLink href="/diensten/particulier" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
                   Particuliere dienstverlening
-                </Link>
-                <Link
-                  href="/diensten/zakelijk"
-                  className={cn(
-                    "block py-1 px-2 rounded-md",
-                    pathname === "/diensten/zakelijk" ? "bg-primary text-white" : "hover:bg-muted",
-                  )}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                </MobileLink>
+                <MobileLink href="/diensten/zakelijk" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
                   Zakelijke dienstverlening
-                </Link>
-                <Link
-                  href="/diensten/bewindvoering"
-                  className={cn(
-                    "block py-1 px-2 rounded-md",
-                    pathname === "/diensten/bewindvoering" ? "bg-primary text-white" : "hover:bg-muted",
-                  )}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  bewindvoering
-                </Link>
+                </MobileLink>
+                <MobileLink href="/diensten/bewindvoering" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
+                  Bewindvoering
+                </MobileLink>
               </div>
             </div>
-            <Link
-              href="/tarieven"
-              className={cn(
-                "block py-2 px-3 rounded-md",
-                pathname === "/tarieven" ? "bg-primary text-white" : "hover:bg-muted",
-              )}
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <MobileLink href="/tarieven" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Tarieven
-            </Link>
-            <Link
-              href="/contact"
-              className={cn(
-                "block py-2 px-3 rounded-md",
-                pathname === "/contact" ? "bg-primary text-white" : "hover:bg-muted",
-              )}
-              onClick={() => setIsMenuOpen(false)}
-            >
+            </MobileLink>
+            <MobileLink href="/contact" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Contact
-            </Link>
+            </MobileLink>
           </div>
         </div>
       )}
     </header>
+  )
+}
+
+function MobileLink({
+  href,
+  pathname,
+  onNavigate,
+  children,
+}: {
+  href: string
+  pathname: string
+  onNavigate: () => void
+  children: React.ReactNode
+}) {
+  const active = pathname === href
+
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "block rounded-lg px-3 py-2.5 text-[15px] font-medium transition-colors",
+        active ? "bg-primary text-white" : "text-foreground/80 hover:bg-primary/5 hover:text-primary",
+      )}
+      onClick={onNavigate}
+    >
+      {children}
+    </Link>
   )
 }
 
@@ -182,13 +187,15 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "group block select-none rounded-lg border border-transparent p-3.5 leading-none no-underline outline-none transition-colors hover:border-primary/15 hover:bg-primary/[0.05] focus:border-primary/15 focus:bg-primary/[0.05]",
               className,
             )}
             {...props}
           >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+            <div className="text-sm font-semibold leading-none text-foreground transition-colors group-hover:text-primary">
+              {title}
+            </div>
+            <p className="mt-1.5 line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
           </a>
         </NavigationMenuLink>
       </li>

@@ -62,6 +62,7 @@ const config = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         lora: ["var(--font-lora)"],
+        source: ["var(--font-source-serif)", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": {
