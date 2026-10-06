@@ -1,6 +1,6 @@
+import CtaBand from "@/components/cta-band"
 import Hero from "@/components/hero"
 import HomeAbout from "@/components/home-about"
-import HomeCta from "@/components/home-cta"
 import HomeServices from "@/components/home-services"
 
 export default function Home() {
@@ -9,7 +9,12 @@ export default function Home() {
       <Hero />
       <HomeServices />
       <HomeAbout />
-      <HomeCta />
+      <CtaBand
+        title="Klaar om uw financiën op orde te brengen?"
+        text="Neem vandaag nog contact op voor een vrijblijvend gesprek."
+        href="/contact"
+        label="Contact opnemen"
+      />
     </>
   )
 }

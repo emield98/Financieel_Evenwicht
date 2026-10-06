@@ -33,7 +33,7 @@ export default function Navbar() {
   const dienstenActive = pathname.startsWith("/diensten")
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
+    <header className="site-header sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
       <div className="container flex h-24 items-center justify-between gap-4 lg:h-28 lg:gap-6">
         <Link href="/" className="flex shrink-0 items-center py-2">
           <Image

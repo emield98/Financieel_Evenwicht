@@ -1,183 +1,82 @@
-import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Item } from "@radix-ui/react-navigation-menu";
+} from "@/components/ui/accordion"
+import PointList from "@/components/point-list"
+import ServicePage from "@/components/service-page"
+import Link from "next/link"
 
 export default function ParticuliereDienstverlening() {
   return (
-    <>
-      {/* Page Header */}
-      <section className="page-header py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Particuliere dienstverlening
-          </h1>
-          <div className="flex items-center text-sm text-white/80 mt-4">
-            <Link href="/" className="hover:underline text-white">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <Link href="/diensten" className="hover:underline text-white">
-              Diensten
-            </Link>
-            <span className="mx-2">/</span>
-            <span>Particuliere dienstverlening</span>
-          </div>
-        </div>
-      </section>
+    <ServicePage
+      title="Particuliere dienstverlening"
+      crumb="Particuliere dienstverlening"
+      image="/img/margriet.png"
+      imageAlt="Particuliere dienstverlening"
+      asideTitle="Persoonlijk advies"
+      asideText="Wilt u weten wat ik voor u kan betekenen? Neem contact op voor een vrijblijvend gesprek."
+      exclude="/diensten/particulier"
+    >
+      <p>
+        Wij helpen u graag bij uw belastingaangifte en uiteenlopende financiële vragen. Daarnaast bieden we persoonlijke
+        begeleiding wanneer u er alleen even niet uitkomt, zowel op financieel vlak als daarbuiten. Met een combinatie
+        van vakkennis en oprechte aandacht staan we naast u tijdens lastige periodes en op belangrijke momenten in uw
+        leven.
+      </p>
 
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
-              <p className="text-lg mb-8">
-                Wij helpen u graag bij uw belastingaangifte en uiteenlopende financiële vragen. Daarnaast bieden we persoonlijke begeleiding wanneer u er alleen even niet uitkomt, zowel op financieel vlak als daarbuiten. Met een combinatie van vakkennis en oprechte aandacht staan we naast u tijdens lastige periodes en op belangrijke momenten in uw leven.
-              </p>
+      <h2>Onze Diensten</h2>
 
-              <h2 className="text-3xl font-bold mb-6">Onze Diensten</h2>
+      <Accordion type="single" collapsible>
+        <AccordionItem value="item-1">
+          <AccordionTrigger>Financiële begeleiding</AccordionTrigger>
+          <AccordionContent>
+            <p>
+              Wij bieden hulp bij uiteenlopende financiële vraagstukken en persoonlijke begeleiding bij belangrijke
+              levensgebeurtenissen.
+            </p>
+            <p>U kunt onder andere bij ons terecht voor:</p>
+            <PointList
+              items={[
+                "Belastingaangifte",
+                "Overlijdensaangifte",
+                "Successie- en erfbelastingaangifte",
+                "Ondersteuning als executeur of bij de afwikkeling van een nalatenschap",
+                "Ondersteuning bij schenkingen",
+                "Financiële begeleiding bij echtscheiding",
+                "Berekenen en aanvragen van toeslagen",
+                "Opmaken van bezwaarschriften",
+                "Aanvragen van uitkeringen",
+              ]}
+            />
+          </AccordionContent>
+        </AccordionItem>
 
-              <Accordion type="single" collapsible className="w-full mb-8">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Financiële begeleiding</AccordionTrigger>
-                  <AccordionContent>
-                    <p className="mb-4">
-                      Wij bieden hulp bij uiteenlopende financiële vraagstukken en persoonlijke begeleiding bij belangrijke levensgebeurtenissen.
-                    </p>
-                    <p className="mb-4">
-                      U kunt onder andere bij ons terecht voor:
-                    </p>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Belastingaangifte</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Overlijdensaangifte</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Successie- en erfbelastingaangifte</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Ondersteuning als executeur of bij de afwikkeling van een nalatenschap</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Ondersteuning bij schenkingen</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Financiële begeleiding bij echtscheiding</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Berekenen en aanvragen van toeslagen</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Opmaken van bezwaarschriften</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Aanvragen van uitkeringen</li>
-                    </ul>
+        <AccordionItem value="item-2">
+          <AccordionTrigger>Individuele begeleiding</AccordionTrigger>
+          <AccordionContent>
+            <p>
+              Naast financiële begeleiding bieden wij persoonlijke begeleiding die volledig aansluit op uw wensen en
+              behoeften. Deze begeleiding kan zich richten op diverse gebieden; denk hierbij aan praktische of emotionele
+              ondersteuning in het dagelijkse leven, al dan niet in combinatie met uw geldzaken. Dankzij onze ruime
+              ervaring en de juiste diploma&apos;s bieden wij gespecialiseerde hulp aan:
+            </p>
+            <PointList
+              items={[
+                "Mensen met niet-aangeboren hersenletsel (NAH)",
+                "Ouderen die door leeftijd of gezondheid moeite hebben met het regelen van praktische zaken",
+                "Mensen die behoefte hebben aan rust, overzicht of een vertrouwd aanspreekpunt bij levensveranderingen",
+              ]}
+            />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
 
-
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>Individuele begeleiding</AccordionTrigger>
-                  <AccordionContent>
-                    <p className="mb-4">
-                      Naast financiële begeleiding bieden wij persoonlijke begeleiding die volledig aansluit op uw wensen en behoeften. Deze begeleiding kan zich richten op diverse gebieden; denk hierbij aan praktische of emotionele ondersteuning in het dagelijkse leven, al dan niet in combinatie met uw geldzaken. Dankzij onze ruime ervaring en de juiste diploma's bieden wij gespecialiseerde hulp aan:
-                    </p>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />Mensen met niet-aangeboren hersenletsel (NAH)</li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        Ouderen die door leeftijd of gezondheid moeite hebben
-                        met het regelen van praktische zaken
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        Mensen die behoefte hebben aan rust, overzicht of een
-                        vertrouwd aanspreekpunt bij levensveranderingen
-                      </li>
-                    </ul>
-
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-
-              <p className="text-lg">
-                Staat uw hulpvraag er niet bij? Geen probleem! Neem gerust{" "}
-                <Link href="/contact" className="text-primary hover:underline">
-                  contact
-                </Link>{" "}
-                met ons op. We luisteren graag naar uw verhaal en kijken samen wat we voor u kunnen betekenen.
-              </p>
-            </div>
-
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-8">
-                <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                  <Image
-                    src="/img/margriet.png"
-                    alt="Particuliere dienstverlening"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="sm: bg-primary lg:bg-primary/70 text-white p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4">Persoonlijk advies</h3>
-                  <p className="mb-6">
-                    Wilt u weten wat ik voor u kan betekenen? Neem contact op
-                    voor een vrijblijvend gesprek.
-                  </p>
-                  <Button asChild variant="secondary" className="w-full">
-                    <Link href="/contact">
-                      Contact Opnemen <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Andere diensten
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">
-                Zakelijke dienstverlening
-              </h3>
-              <p className="mb-6">
-                Voor ondernemers en bedrijven bieden wij complete financiële en
-                fiscale ondersteuning. Van het bijhouden van uw administratie
-                tot het verzorgen van uw belastingaangiften en jaarrekeningen.
-              </p>
-              <Button asChild variant="outline">
-                <Link href="/diensten/zakelijk">
-                  Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Bewindvoering</h3>
-              <p className="mb-6">
-                Soms lukt het niet (meer) om de eigen financiën goed te overzien. Bewindvoering of budgetcoaching kan in zulke situaties uitkomst bieden. We kijken samen met u wat het beste past bij uw persoonlijke situatie.
-              </p>
-              <Button asChild variant="outline">
-                <Link href="/diensten/bewindvoering">
-                  Meer informatie <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+      <p>
+        Staat uw hulpvraag er niet bij? Geen probleem! Neem gerust <Link href="/contact">contact</Link> met ons op. We
+        luisteren graag naar uw verhaal en kijken samen wat we voor u kunnen betekenen.
+      </p>
+    </ServicePage>
+  )
 }

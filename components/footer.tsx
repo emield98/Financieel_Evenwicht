@@ -4,122 +4,81 @@ import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/30 border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and About */}
-          <div className="md:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={180} height={70} />
+    <footer className="site-footer">
+      <div className="wrap">
+        <div className="footer-grid">
+          <div>
+            <Link href="/" className="footer-logo">
+              <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={288} height={100} className="h-16 w-auto" />
             </Link>
-            <p className="text-muted-foreground text-sm">
-              Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie, belastingaangiften en financieel zorgbeheer.
+            <p>
+              Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie,
+              belastingaangiften en financieel zorgbeheer.
             </p>
           </div>
 
-          {/* Site Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Site</h3>
-            <ul className="space-y-2">
+            <h3>Site</h3>
+            <ul>
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Home
-                </Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/over" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Over ons
-                </Link>
+                <Link href="/over">Over ons</Link>
               </li>
               <li>
-                <Link href="/tarieven" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Tarieven
-                </Link>
+                <Link href="/tarieven">Tarieven</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact
-                </Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Diensten</h3>
-            <ul className="space-y-2">
+            <h3>Diensten</h3>
+            <ul>
               <li>
-                <Link
-                  href="/diensten/particulier"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Particuliere dienstverlening
-                </Link>
+                <Link href="/diensten/particulier">Particuliere dienstverlening</Link>
               </li>
               <li>
-                <Link
-                  href="/diensten/zakelijk"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Zakelijke dienstverlening
-                </Link>
+                <Link href="/diensten/zakelijk">Zakelijke dienstverlening</Link>
               </li>
               <li>
-                <Link
-                  href="/diensten/bewindvoering"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Bewindvoering
-                </Link>
+                <Link href="/diensten/bewindvoering">Bewindvoering</Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground">
+            <h3>Contact</h3>
+            <ul>
+              <li className="contact-row">
+                <MapPin aria-hidden="true" />
+                <span>
                   Spoorstraat 35
                   <br />
                   9636 AS Zuidbroek
                 </span>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                <a href="tel:+31651740538" className="text-muted-foreground hover:text-foreground transition-colors">
-                  +316 517 405 38
-                </a>
+              <li className="contact-row">
+                <Phone aria-hidden="true" />
+                <a href="tel:+31651740538">+316 517 405 38</a>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                <a
-                  href="mailto:financieel.evenwicht@home.nl"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  financieel.evenwicht@home.nl
-                </a>
+              <li className="contact-row">
+                <Mail aria-hidden="true" />
+                <a href="mailto:financieel.evenwicht@home.nl">financieel.evenwicht@home.nl</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <hr className="my-8 border-border" />
-
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Financieel en Fiscaal Evenwicht. Alle rechten voorbehouden.
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacybeleid
-            </Link>
-            <Link href="/voorwaarden" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Algemene voorwaarden
-            </Link>
-          </div>
+        <div className="footer-base">
+          <p>&copy; {new Date().getFullYear()} Financieel en Fiscaal Evenwicht. Alle rechten voorbehouden.</p>
+          <nav aria-label="Juridisch">
+            <Link href="/privacy">Privacybeleid</Link>
+            <Link href="/voorwaarden">Algemene voorwaarden</Link>
+          </nav>
         </div>
       </div>
     </footer>

@@ -1,3 +1,4 @@
+import Heading from "@/components/heading"
 import ServiceCard from "@/components/service-card"
 
 const services = [
@@ -26,18 +27,14 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <section className="border-t-4 border-primary bg-[#f7f4f2]">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-10 lg:py-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Diensten</p>
-        <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          Onze diensten
-        </h2>
-        <span className="mt-5 block h-px w-12 bg-primary" aria-hidden="true" />
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven
-        </p>
-
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+    <section className="section section--white">
+      <div className="wrap">
+        <Heading
+          eyebrow="Diensten"
+          title="Onze diensten"
+          intro="Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven"
+        />
+        <div className="card-grid">
           {services.map((service) => (
             <ServiceCard key={service.href} {...service} />
           ))}

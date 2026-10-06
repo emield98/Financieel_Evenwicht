@@ -12,11 +12,11 @@ const sourceSerif = Source_Serif_4({
 
 export default function Hero() {
   return (
-    <section className={`${sourceSerif.variable} bg-[#f8f4f3]`}>
+    <section className={`${sourceSerif.variable} hero`}>
       <div className="grid lg:h-[38rem] lg:grid-cols-[9fr_11fr]">
         <div className="flex flex-col justify-center px-6 py-12 sm:px-12 lg:py-12 lg:pl-28 lg:pr-16 xl:pl-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Sinds 2008</p>
-          <span className="mt-4 block h-0.5 w-12 bg-primary" aria-hidden="true" />
+          <p className="eyebrow">Sinds 2008</p>
+          <span className="rule" aria-hidden="true" />
           <h1 className="mt-5 max-w-lg font-source text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
             Financieel & Fiscaal Evenwicht
           </h1>
@@ -43,8 +43,8 @@ export default function Hero() {
             sizes="(min-width: 1024px) 58vw, 100vw"
             className="object-cover object-[center_30%]"
           />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f8f4f3] to-transparent lg:hidden" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-40 bg-gradient-to-r from-[#f8f4f3] to-transparent lg:block" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[var(--cream)] to-transparent lg:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-40 bg-gradient-to-r from-[var(--cream)] to-transparent lg:block" />
         </div>
       </div>
     </section>
