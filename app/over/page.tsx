@@ -1,9 +1,16 @@
+import type { Metadata } from "next"
 import ContactPanel from "@/components/contact-panel"
 import InfoGrid from "@/components/info-grid"
 import MediaFrame from "@/components/media-frame"
 import PageHeader from "@/components/page-header"
 import PointList from "@/components/point-list"
 import Section from "@/components/section"
+
+export const metadata: Metadata = {
+  title: "Over ons",
+  description:
+    "Sinds 2008 ondersteunt Financieel & Fiscaal Evenwicht particulieren, zzp'ers en mkb'ers met administratie, belastingaangiften en bewindvoering. Persoonlijk en betrouwbaar.",
+}
 
 const values = [
   {
@@ -41,7 +48,7 @@ export default function OverOns() {
         <div className="split">
           <div className="copy">
             <blockquote className="pullquote">Betrokken, betrouwbaar en mensgericht</blockquote>
-            <h2>Mijn Achtergrond</h2>
+            <h2>Onze achtergrond</h2>
             <p>
               Sinds 2008 biedt Financieel en Fiscaal Evenwicht ondersteuning aan particulieren, zzp’ers en mkb’ers.
               Oprichtster Margriet Doornbosch combineert meer dan 16 jaar ervaring bij ABN AMRO met kennis uit de
@@ -61,7 +68,7 @@ export default function OverOns() {
             </p>
 
             <h2>Onze kernwaarden</h2>
-            <p>Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven.</p>
+            <p>Deze waarden vormen de basis van hoe wij werken en met u omgaan.</p>
             <InfoGrid items={values} />
 
             <h2>Heldere gedragsregels</h2>

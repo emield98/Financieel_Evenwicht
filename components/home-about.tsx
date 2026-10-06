@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function HomeAbout() {
   return (
-    <section className="section section--paper">
+    <section className="section section--white bg-[#f1f1f1]">
       <div className="wrap about-grid">
         <MediaFrame src="/img/finadmfis.png" alt="Over Financieel Evenwicht" />
         <div>

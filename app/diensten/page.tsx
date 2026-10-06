@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import CtaBand from "@/components/cta-band"
 import Heading from "@/components/heading"
@@ -49,6 +50,12 @@ const services = [
     imageAlt: "Zakelijke dienstverlening",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "Diensten",
+  description:
+    "Overzicht van onze diensten: particuliere dienstverlening, zakelijke administratie en belastingaangiften, en bewindvoering of budgetcoaching.",
+}
 
 export default function Diensten() {
   return (

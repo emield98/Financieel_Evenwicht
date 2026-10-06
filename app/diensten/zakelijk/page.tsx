@@ -4,9 +4,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import type { Metadata } from "next"
 import InfoGrid from "@/components/info-grid"
 import ServicePage from "@/components/service-page"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Zakelijke dienstverlening",
+  description:
+    "Administratie, btw- en inkomstenbelastingaangiften, jaarrekeningen, debiteurenbeheer en startersbegeleiding voor zzp'ers en mkb.",
+}
 
 const benefits = [
   {
@@ -32,7 +39,7 @@ export default function ZakelijkeDienstverlening() {
     <ServicePage
       title="Zakelijke dienstverlening"
       crumb="Zakelijke dienstverlening"
-      image="/img/margriet.png"
+      image="/img/card/zak_dienst.jpg"
       imageAlt="Zakelijke dienstverlening"
       asideTitle="Zakelijk advies"
       asideText="Wilt u weten wat wij voor uw onderneming kunnen betekenen? Neem contact op voor een vrijblijvend gesprek."
@@ -44,9 +51,9 @@ export default function ZakelijkeDienstverlening() {
         inzicht heeft in uw financiële situatie en voldoet aan alle wettelijke verplichtingen.
       </p>
 
-      <h2>Onze Zakelijke Diensten</h2>
+      <h2>Onze zakelijke diensten</h2>
 
-      <Accordion type="single" collapsible>
+      <Accordion type="single" collapsible defaultValue="item-1">
         <AccordionItem value="item-1">
           <AccordionTrigger>Financiële administratie</AccordionTrigger>
           <AccordionContent>
@@ -127,7 +134,7 @@ export default function ZakelijkeDienstverlening() {
       <InfoGrid items={benefits} />
 
       <p>
-        Wilt u meer weten over mijn zakelijke dienstverlening? Neem dan <Link href="/contact">contact</Link> op voor een
+        Wilt u meer weten over onze zakelijke dienstverlening? Neem dan <Link href="/contact">contact</Link> op voor een
         vrijblijvend gesprek. We denken graag met u mee over de beste oplossing voor uw onderneming.
       </p>
     </ServicePage>

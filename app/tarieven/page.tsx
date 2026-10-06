@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import Heading from "@/components/heading"
 import PageHeader from "@/components/page-header"
@@ -5,6 +6,12 @@ import Section from "@/components/section"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Tarieven",
+  description:
+    "Transparante uurtarieven voor particuliere en zakelijke dienstverlening, bewindvoering en individuele begeleiding. Maatwerk op aanvraag.",
+}
 
 export default function Tarieven() {
   return (
@@ -52,7 +59,6 @@ export default function Tarieven() {
                 <TableCell className="font-medium">Individuele begeleiding</TableCell>
                 <TableCell>
                   vanaf € 50,00
-                  <br />
                   <i>De uiteindelijke kosten zijn afhankelijk van eventuele vergoedingen via de gemeente (Wmo of Wlz).</i>
                 </TableCell>
               </TableRow>
@@ -63,7 +69,7 @@ export default function Tarieven() {
         <div className="note">
           <h3>Maatwerk</h3>
           <p>
-            Bovenstaande tarieven zijn richtprijzen. Afhankelijk van uw specifieke situatie en wensen kunnen er een
+            Bovenstaande tarieven zijn richtprijzen. Afhankelijk van uw specifieke situatie en wensen kunnen wij een
             tarief op maat aanbieden. Neem contact met ons op voor een vrijblijvende offerte.
           </p>
         </div>

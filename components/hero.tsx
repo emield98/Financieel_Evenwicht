@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section className={`${sourceSerif.variable} hero`}>
       <div className="grid lg:h-[38rem] lg:grid-cols-[9fr_11fr]">
-        <div className="flex flex-col justify-center px-6 py-12 sm:px-12 lg:py-12 lg:pl-28 lg:pr-16 xl:pl-32">
+        <div className="hero__text">
           <p className="eyebrow">Sinds 2008</p>
           <span className="rule" aria-hidden="true" />
           <h1 className="mt-5 max-w-lg font-source text-4xl font-semibold leading-tight text-foreground sm:text-5xl">

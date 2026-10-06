@@ -1,68 +1,16 @@
-"use client"
-
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import Heading from "@/components/heading"
+import type { Metadata } from "next"
+import ContactForm from "@/components/contact-form"
 import PageHeader from "@/components/page-header"
 import Section from "@/components/section"
-import { useToast } from "@/hooks/use-toast"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
 
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Neem contact op met Financieel & Fiscaal Evenwicht in Zuidbroek voor een vrijblijvend gesprek over administratie, belastingaangifte of bewindvoering.",
+}
+
 export default function Contact() {
-  const { toast } = useToast()
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    telefoonnummer: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const phoneInvalid = formData.telefoonnummer !== "" && !/^[0-9+\s\-]*$/.test(formData.telefoonnummer)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      const response = await fetch("https://formspree.io/f/mldbdevb", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        toast({
-          title: "Bericht verzonden",
-          description: `Bedankt ${formData.name}, uw bericht is succesvol verzonden.`,
-          variant: "success",
-        })
-        setFormData({ name: "", email: "", telefoonnummer: "", message: "" })
-      } else {
-        toast({
-          title: "Fout",
-          description: "Er ging iets mis bij het verzenden.",
-          variant: "destructive",
-        })
-      }
-    } catch (error) {
-      toast({ title: "Fout", description: "Netwerkprobleem of serverfout." })
-    }
-
-    setIsSubmitting(false)
-  }
-
   return (
     <>
       <PageHeader
@@ -73,47 +21,7 @@ export default function Contact() {
 
       <Section>
         <div className="split">
-          <div className="form-card">
-            <Heading title="Neem contact met ons op" intro="Vul het formulier in en wij nemen zo snel mogelijk contact met u op" />
-            <form onSubmit={handleSubmit} className="stack">
-              <div className="field">
-                <Label htmlFor="name">Naam</Label>
-                <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
-              </div>
-              <div className="field">
-                <Label htmlFor="email">E-mail</Label>
-                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-              </div>
-              <div className="field">
-                <Label htmlFor="telefoonnummer">Telefoonnummer</Label>
-                <Input
-                  id="telefoonnummer"
-                  name="telefoonnummer"
-                  type="text"
-                  inputMode="tel"
-                  pattern="[0-9+\s\-]*"
-                  value={formData.telefoonnummer}
-                  onChange={handleChange}
-                  aria-invalid={phoneInvalid}
-                  aria-describedby="telefoonnummer-error"
-                />
-                {phoneInvalid ? (
-                  <p id="telefoonnummer-error" className="field-error">
-                    Voer een geldig telefoonnummer in (alleen cijfers, spaties, + of -).
-                  </p>
-                ) : null}
-              </div>
-              <div className="field">
-                <Label htmlFor="message">Bericht</Label>
-                <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} required />
-              </div>
-              <div className="actions">
-                <Button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Verzenden..." : "Verzenden"}
-                </Button>
-              </div>
-            </form>
-          </div>
+          <ContactForm />
 
           <aside className="split__aside">
             <div className="panel">
@@ -183,7 +91,7 @@ export default function Contact() {
                       <strong>Zondag:</strong> Gesloten
                     </p>
                     <p>
-                      <i>Ons kantoor is enkel op afspraak geopend</i>
+                      <i>Ons kantoor is enkel op afspraak geopend.</i>
                     </p>
                   </div>
                 </div>

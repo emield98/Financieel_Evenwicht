@@ -9,16 +9,21 @@ import { Toaster } from "@/components/ui/toaster"
 import { ToastProvider } from "@/components/ui/toast"
 import { Analytics } from "@vercel/analytics/react"
 
-
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" })
 
+const siteName = "Financieel & Fiscaal Evenwicht"
+
 export const metadata: Metadata = {
-  title: "Financieel & Fiscaal Evenwicht",
-  description: "Voor betrouwbare financiële en fiscale ondersteuning",
-    icons: {
-      icon: '/favicon.png', 
-    },
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description:
+    "Betrouwbare financiële en fiscale ondersteuning sinds 2008: administratie, belastingaangiften en bewindvoering voor particulieren, zzp'ers en mkb.",
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
@@ -29,18 +34,15 @@ export default function RootLayout({
   return (
     <html lang="nl" suppressHydrationWarning>
       <body className={`${inter.variable} ${lora.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <ToastProvider> {/* 👈 HIER toevoegen */}
-
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
+          <ToastProvider>
             <div className="flex min-h-screen flex-col">
               <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
-
-            <Toaster /> {/* dit staat al goed */}
-
-          </ToastProvider> {/* 👈 sluiten */}
+            <Toaster />
+          </ToastProvider>
         </ThemeProvider>
         <Analytics />
       </body>

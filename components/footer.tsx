@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { site } from "@/lib/site"
 
 export default function Footer() {
   return (
@@ -9,29 +10,20 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <Link href="/" className="footer-logo">
-              <Image src="/img/fin_logo.png" alt="Financieel Evenwicht" width={288} height={100} className="h-16 w-auto" />
+              <Image src="/img/fin_logo.png" alt={site.name} width={288} height={100} className="h-16 w-auto" />
             </Link>
             <p>
-              Voor betrouwbare financiële en fiscale ondersteuning sinds 2008. Wij helpen u met uw administratie,
-              belastingaangiften en financieel zorgbeheer.
+              Voor betrouwbare financiële en fiscale ondersteuning sinds {site.since}. Wij helpen u met uw
+              administratie, belastingaangiften en financieel zorgbeheer.
             </p>
           </div>
 
           <div>
-            <h3>Site</h3>
+            <h3>Bedrijfsgegevens</h3>
             <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/over">Over ons</Link>
-              </li>
-              <li>
-                <Link href="/tarieven">Tarieven</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
+              <li>KvK {site.kvk}</li>
+              <li>{site.openingHours}</li>
+              <li>{site.openingNote}</li>
             </ul>
           </div>
 
@@ -47,6 +39,9 @@ export default function Footer() {
               <li>
                 <Link href="/diensten/bewindvoering">Bewindvoering</Link>
               </li>
+              <li>
+                <Link href="/tarieven">Tarieven</Link>
+              </li>
             </ul>
           </div>
 
@@ -56,25 +51,27 @@ export default function Footer() {
               <li className="contact-row">
                 <MapPin aria-hidden="true" />
                 <span>
-                  Spoorstraat 35
+                  {site.address.street}
                   <br />
-                  9636 AS Zuidbroek
+                  {site.address.postalCode} {site.address.city}
                 </span>
               </li>
               <li className="contact-row">
                 <Phone aria-hidden="true" />
-                <a href="tel:+31651740538">+316 517 405 38</a>
+                <a href={site.phoneHref}>{site.phone}</a>
               </li>
               <li className="contact-row">
                 <Mail aria-hidden="true" />
-                <a href="mailto:financieel.evenwicht@home.nl">financieel.evenwicht@home.nl</a>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-base">
-          <p>&copy; {new Date().getFullYear()} Financieel en Fiscaal Evenwicht. Alle rechten voorbehouden.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {site.legalName}. Alle rechten voorbehouden.
+          </p>
           <nav aria-label="Juridisch">
             <Link href="/privacy">Privacybeleid</Link>
             <Link href="/voorwaarden">Algemene voorwaarden</Link>

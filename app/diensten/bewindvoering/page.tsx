@@ -1,7 +1,14 @@
+import type { Metadata } from "next"
 import InfoGrid from "@/components/info-grid"
 import PointList from "@/components/point-list"
 import ServicePage from "@/components/service-page"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Bewindvoering",
+  description:
+    "Beschermingsbewind en budgetcoaching met persoonlijke aandacht: overzicht en rust in uw financiën, met oog voor zelfstandigheid waar dat kan.",
+}
 
 const approach = [
   {
@@ -27,7 +34,7 @@ export default function Bewindvoering() {
     <ServicePage
       title="Bewindvoering"
       crumb="Bewindvoering"
-      image="/img/finadmfis.png"
+      image="/img/card/bewind.jpg"
       imageAlt="Bewindvoering"
       asideTitle="Persoonlijk gesprek"
       asideText="Wilt u weten wat wij voor u of uw naasten kunnen betekenen? Neem contact op voor een vrijblijvend gesprek."
@@ -60,11 +67,11 @@ export default function Bewindvoering() {
         zodat u goed begrijpt wat er gebeurt met uw geld.
       </p>
 
-      <h2>Onze Aanpak</h2>
+      <h2>Onze aanpak</h2>
       <InfoGrid items={approach} />
 
       <p>
-        Heeft u vragen over mijn diensten voor bewindvoering? Neem dan <Link href="/contact">contact</Link> met mij op
+        Heeft u vragen over onze diensten voor bewindvoering? Neem dan <Link href="/contact">contact</Link> met ons op
         voor een vrijblijvend gesprek. We denken graag met u mee over de beste oplossing voor uw situatie.
       </p>
     </ServicePage>

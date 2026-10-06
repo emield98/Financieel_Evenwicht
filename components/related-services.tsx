@@ -28,9 +28,9 @@ export default function RelatedServices({ exclude }: { exclude: string }) {
     <section className="section section--paper">
       <div className="wrap">
         <Heading align="center" eyebrow="Diensten" title="Andere diensten" />
-        <div className="text-grid">
+        <div className="tile-grid">
           {items.map((service) => (
-            <article key={service.href} className="text-card">
+            <article key={service.href} className="tile">
               <h3 className="card__title">{service.title}</h3>
               <p>{service.text}</p>
               <div className="actions">

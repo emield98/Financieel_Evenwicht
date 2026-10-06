@@ -4,24 +4,25 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm, neutral palette so greys and borders match the cream/paper surfaces */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 10%;
     --primary: 358 85% 25%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 20 30% 98%;
+    --secondary: 20 25% 96%;
+    --secondary-foreground: 220 20% 12%;
+    --muted: 20 25% 96%;
+    --muted-foreground: 230 6% 42%;
+    --accent: 20 25% 96%;
+    --accent-foreground: 220 20% 12%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --destructive-foreground: 20 30% 98%;
+    --border: 20 18% 88%;
+    --input: 20 14% 82%;
     --ring: 358 85% 25%;
     --radius: 0.5rem;
 
@@ -82,20 +83,54 @@
     border-bottom: 0px solid hsl(var(--primary));
   }
 
-  .hero {
+  /* Only the header surfaces (hero, page intro) and the footer carry a tint and a full-width rule */
+  .hero,
+  .page-intro {
     background: var(--cream);
+    border-bottom: 2px solid hsl(var(--primary));
+  }
+
+  /* Left edge of the hero copy lines up with the .wrap content below it */
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .hero__text {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero__text {
+      padding: 3rem 4rem 3rem calc(max((100vw - 72rem) / 2, 0px) + 2.5rem);
+    }
   }
 
   .section {
-    border-top: 2px solid hsl(var(--primary));
-  }
-
-  .section--white {
+    position: relative;
     background: #fff;
   }
 
+  /* Between two content sections: a short, centred rule instead of a full-width border */
+  .section + .section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4rem;
+    height: 1px;
+    transform: translateX(-50%);
+    background: hsl(var(--primary) / 0.7);
+  }
+
+  /* Tone modifiers kept for the Section API; content sections are always white now */
+  .section--white,
   .section--paper {
-    background: var(--paper);
+    background: #fff;
   }
 
   .wrap {
@@ -131,8 +166,23 @@
     }
   }
 
-  .page-intro {
-    background: var(--cream);
+  /* Horizontal grid only (header bars); declared after the breakpoints so it wins */
+  .wrap--bar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Fills the remaining viewport height (404 and similar short pages) */
+  .page-intro--fill {
+    display: flex;
+    border-bottom: 0; /* footer directly below already draws the rule */
+    min-height: calc(100vh - 7rem);
+    align-items: center;
+  }
+
+  /* Spacing between loose intro copy and a following heading block */
+  .copy + .heading-block {
+    margin-top: 3rem;
   }
 
   .eyebrow {
@@ -186,15 +236,63 @@
 
   .lede,
   .copy > p,
+  .legal-section > p,
   .copy li {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     line-height: 1.7;
   }
 
+  @media (min-width: 640px) {
+    .lede,
+    .copy > p,
+    .legal-section > p,
+    .copy li {
+      font-size: 1.125rem;
+    }
+  }
+
   .lede,
-  .copy > p {
+  .copy > p,
+  .legal-section > p {
     margin-top: 1.25rem;
     color: hsl(var(--foreground) / 0.82);
+  }
+
+  /* Anchor targets stop below the sticky header */
+  .legal-section {
+    scroll-margin-top: 8.5rem;
+  }
+
+  .toc {
+    margin-top: 2rem;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    padding: 1.5rem;
+  }
+
+  .toc ol {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .copy .toc a {
+    font-size: 0.9375rem;
+    color: hsl(var(--foreground) / 0.82);
+  }
+
+  .copy .toc a:hover {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+  }
+
+  @media (min-width: 640px) {
+    .toc ol {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
   }
 
   .copy h2 {
@@ -217,9 +315,28 @@
     text-decoration: underline;
   }
 
-  .copy [data-orientation="vertical"] {
+  .copy > [data-orientation="vertical"] {
     margin-top: 1.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .copy [data-orientation="vertical"] p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: hsl(var(--foreground) / 0.82);
+  }
+
+  .copy [data-orientation="vertical"] p + p {
+    margin-top: 0.85rem;
+  }
+
+  .copy [data-orientation="vertical"] .points {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .copy .points li {
+    font-size: 1rem;
   }
 
   .copy ul.list {
@@ -268,7 +385,7 @@
   }
 
   .card-grid,
-  .text-grid,
+  .tile-grid,
   .info-grid {
     display: grid;
     gap: 1.5rem;
@@ -279,7 +396,7 @@
     gap: 2rem;
   }
 
-  .text-grid,
+  .tile-grid,
   .info-grid {
     margin-top: 1.75rem;
   }
@@ -289,14 +406,19 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .text-grid,
+    .tile-grid,
     .info-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* An odd last item spans the full row instead of leaving a gap */
+    .info-grid > :last-child:nth-child(odd) {
+      grid-column: 1 / -1;
     }
   }
 
   .card,
-  .text-card,
+  .tile,
   .info-card,
   .panel,
   .form-card,
@@ -327,7 +449,7 @@
   }
 
   .card__body,
-  .text-card,
+  .tile,
   .info-card,
   .panel,
   .note {
@@ -346,7 +468,7 @@
   }
 
   .card__text,
-  .text-card p,
+  .tile p,
   .info-card p,
   .panel p,
   .note p {
@@ -380,14 +502,14 @@
     transform: translateX(0.25rem);
   }
 
-  .text-card,
+  .tile,
   .panel {
     display: flex;
     height: 100%;
     flex-direction: column;
   }
 
-  .text-card .actions,
+  .tile .actions,
   .panel .actions {
     margin-top: auto;
     padding-top: 1.5rem;
@@ -595,6 +717,40 @@
     width: 100%;
   }
 
+  .rate-table td,
+  .rate-table th {
+    font-size: 0.9375rem;
+  }
+
+  .rate-table i {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Stack rows on narrow screens so long notes don't wrap word-by-word */
+  @media (max-width: 639px) {
+    .rate-table thead {
+      display: none;
+    }
+
+    .rate-table tr {
+      display: block;
+      padding: 1rem 1.25rem;
+    }
+
+    .rate-table td {
+      display: block;
+      width: auto;
+      padding: 0;
+    }
+
+    .rate-table td + td {
+      margin-top: 0.35rem;
+    }
+  }
+
   .note {
     margin-top: 1.5rem;
   }
@@ -624,7 +780,7 @@
 
   @media (min-width: 768px) {
     .footer-grid {
-      grid-template-columns: 1.3fr 0.8fr 1.1fr 1.15fr;
+      grid-template-columns: 1.2fr 1.1fr 1fr 1.1fr;
     }
   }
 

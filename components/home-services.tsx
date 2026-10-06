@@ -32,7 +32,7 @@ export default function HomeServices() {
         <Heading
           eyebrow="Diensten"
           title="Onze diensten"
-          intro="Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven"
+          intro="Wij bieden een breed scala aan financiële en fiscale diensten voor particulieren en bedrijven."
         />
         <div className="card-grid">
           {services.map((service) => (

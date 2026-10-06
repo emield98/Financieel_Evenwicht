@@ -4,19 +4,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import type { Metadata } from "next"
 import PointList from "@/components/point-list"
 import ServicePage from "@/components/service-page"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Particuliere dienstverlening",
+  description:
+    "Hulp bij belastingaangifte, toeslagen en persoonlijke financiële begeleiding, ook bij niet-aangeboren hersenletsel of ingrijpende levensgebeurtenissen.",
+}
 
 export default function ParticuliereDienstverlening() {
   return (
     <ServicePage
       title="Particuliere dienstverlening"
       crumb="Particuliere dienstverlening"
-      image="/img/margriet.png"
+      image="/img/card/part_dienst.jpg"
       imageAlt="Particuliere dienstverlening"
       asideTitle="Persoonlijk advies"
-      asideText="Wilt u weten wat ik voor u kan betekenen? Neem contact op voor een vrijblijvend gesprek."
+      asideText="Wilt u weten wat wij voor u kunnen betekenen? Neem contact op voor een vrijblijvend gesprek."
       exclude="/diensten/particulier"
     >
       <p>
@@ -26,9 +33,9 @@ export default function ParticuliereDienstverlening() {
         leven.
       </p>
 
-      <h2>Onze Diensten</h2>
+      <h2>Onze diensten</h2>
 
-      <Accordion type="single" collapsible>
+      <Accordion type="single" collapsible defaultValue="item-1">
         <AccordionItem value="item-1">
           <AccordionTrigger>Financiële begeleiding</AccordionTrigger>
           <AccordionContent>

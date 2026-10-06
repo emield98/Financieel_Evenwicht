@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <header className="site-header sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="container flex h-24 items-center justify-between gap-4 lg:h-28 lg:gap-6">
+      <div className="wrap wrap--bar flex h-24 items-center justify-between gap-4 lg:h-28 lg:gap-6">
         <Link href="/" className="flex shrink-0 items-center py-2">
           <Image
             src="/img/fin_logo.png"
@@ -118,7 +118,7 @@ export default function Navbar() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="border-t border-primary/10 bg-white lg:hidden">
-          <div className="container space-y-1 py-3">
+          <div className="wrap wrap--bar space-y-1 py-3">
             <MobileLink href="/" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Home
             </MobileLink>
