@@ -79,8 +79,58 @@
 }
 
 @layer components {
+  /* Split header: white brand area left, burgundy bar (rounded start) running to the right edge */
   .site-header {
-    border-bottom: 0px solid hsl(var(--primary));
+    background: #fff;
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: stretch;
+    height: 6rem;
+  }
+
+  .site-header__brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding-inline: 1.5rem;
+  }
+
+  .site-header__bar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    background: hsl(var(--primary));
+    border-radius: 9999px 0 0 9999px;
+    padding-left: 3.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .site-header__brand,
+    .site-header__bar {
+      padding-right: 2rem;
+    }
+
+    .site-header__brand {
+      padding-left: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-header__inner {
+      height: 7rem;
+    }
+
+    .site-header__brand {
+      padding-left: calc(max((100vw - 72rem) / 2, 0px) + 2.5rem);
+    }
+
+    .site-header__bar {
+      padding-right: calc(max((100vw - 72rem) / 2, 0px) + 2.5rem);
+    }
   }
 
   /* Only the header surfaces (hero, page intro) and the footer carry a tint and a full-width rule */
@@ -780,7 +830,7 @@
 
   @media (min-width: 768px) {
     .footer-grid {
-      grid-template-columns: 1.2fr 1.1fr 1fr 1.1fr;
+      grid-template-columns: 1.2fr 1fr 1fr 1.1fr;
     }
   }
 

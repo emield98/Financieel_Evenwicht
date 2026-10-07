@@ -19,11 +19,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3>Bedrijfsgegevens</h3>
+            <h3>Site</h3>
             <ul>
-              <li>KvK {site.kvk}</li>
-              <li>{site.openingHours}</li>
-              <li>{site.openingNote}</li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/over">Over ons</Link>
+              </li>
+              <li>
+                <Link href="/tarieven">Tarieven</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
@@ -38,9 +47,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/diensten/bewindvoering">Bewindvoering</Link>
-              </li>
-              <li>
-                <Link href="/tarieven">Tarieven</Link>
               </li>
             </ul>
           </div>

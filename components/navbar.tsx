@@ -18,13 +18,13 @@ import { usePathname } from "next/navigation"
 
 const navItemClass = (active: boolean) =>
   cn(
-    "group relative inline-flex h-11 items-center justify-center rounded-md bg-transparent px-3.5 text-[15px] font-medium tracking-wide text-foreground/75 transition-colors",
-    "hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30",
-    "data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary",
-    "after:pointer-events-none after:absolute after:inset-x-3.5 after:bottom-1 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-primary after:transition-transform after:duration-200",
+    "group relative inline-flex h-11 items-center justify-center rounded-md bg-transparent px-3.5 text-[15px] font-medium tracking-wide text-white/80 transition-colors",
+    "hover:bg-transparent hover:text-white focus:bg-transparent focus:text-white",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40",
+    "data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white",
+    "after:pointer-events-none after:absolute after:inset-x-3.5 after:bottom-1 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-white after:transition-transform after:duration-200",
     "hover:after:scale-x-100 data-[state=open]:after:scale-x-100",
-    active && "text-primary after:scale-x-100",
+    active && "text-white after:scale-x-100",
   )
 
 export default function Navbar() {
@@ -33,19 +33,20 @@ export default function Navbar() {
   const dienstenActive = pathname.startsWith("/diensten")
 
   return (
-    <header className="site-header sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="wrap wrap--bar flex h-24 items-center justify-between gap-4 lg:h-28 lg:gap-6">
-        <Link href="/" className="flex shrink-0 items-center py-2">
+    <header className="site-header sticky top-0 z-50 w-full shadow-md">
+      <div className="site-header__inner">
+        <Link href="/" className="site-header__brand">
           <Image
             src="/img/fin_logo.png"
             alt="Financieel & Fiscaal Evenwicht"
             width={288}
             height={100}
             priority
-            className="h-20 w-auto lg:h-[5.5rem]"
+            className="h-16 w-auto sm:h-20 lg:h-[5.5rem]"
           />
         </Link>
 
+        <div className="site-header__bar">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:items-center">
           <NavigationMenu delayDuration={999999}>
@@ -105,7 +106,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-11 w-11 rounded-full text-primary hover:bg-primary/10 hover:text-primary"
+            className="h-11 w-11 rounded-full text-white hover:bg-white/15 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Menu sluiten" : "Menu openen"}
             aria-expanded={isMenuOpen}
@@ -113,11 +114,12 @@ export default function Navbar() {
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="border-t border-primary/10 bg-white lg:hidden">
+        <div className="border-t border-white/20 bg-white lg:hidden">
           <div className="wrap wrap--bar space-y-1 py-3">
             <MobileLink href="/" pathname={pathname} onNavigate={() => setIsMenuOpen(false)}>
               Home

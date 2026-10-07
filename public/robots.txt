@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://financieelevenwicht.nu
-
-# Sitemaps
-Sitemap: https://financieelevenwicht.nu/sitemap.xml
