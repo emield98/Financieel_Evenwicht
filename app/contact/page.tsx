@@ -61,7 +61,7 @@ export default function Contact() {
                   <div>
                     <h3>E-mail</h3>
                     <p>
-                      <a href="mailto:financieel.evenwicht@home.nl">financieel.evenwicht@home.nl</a>
+                      <a href="mailto:info@financieelevenwicht.nl">info@financieelevenwicht.nl</a>
                     </p>
                   </div>
                 </div>

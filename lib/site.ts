@@ -15,7 +15,7 @@ export const site = {
   },
   phone: "+316 517 405 38",
   phoneHref: "tel:+31651740538",
-  email: "financieel.evenwicht@home.nl",
+  email: "info@financieelevenwicht.nl",
   kvk: "01128138",
   openingHours: "Di t/m vr 09:00 - 17:00",
   openingNote: "Uitsluitend op afspraak",

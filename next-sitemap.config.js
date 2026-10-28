@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://financieelevenwicht.nu',
+  siteUrl: 'https://www.financieelevenwicht.nl',
   generateRobotsTxt: true,
 }
